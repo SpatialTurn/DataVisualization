@@ -2,14 +2,18 @@
 title: "Introduction to Data Visualization"
 teaching: 45
 exercises: 30
-questions:
+---
+
+:::::::::::::::::::::::::::::::::::::: questions
 - What exactly is data visualization and how does it differ from simple charts?
 - Why do humans understand visualized data much faster than raw numbers or tables?
 - What are the real advantages and hidden pitfalls of using visuals in data analysis?
 - How does visualization help (or complicate) working with big data?
 - Which tools are most suitable for beginners, intermediate users, and advanced programmers?
 - What makes a visualization "good" versus "misleading"?
-objectives:
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
 - Define data visualization and explain its core purpose
 - List at least five advantages and three disadvantages of data visualization
 - Describe how visualization addresses challenges posed by big data
@@ -17,14 +21,16 @@ objectives:
 - Compare popular open-source and commercial tools for creating visualizations
 - Recognize key principles of effective visualization design
 - Understand ethical considerations and accessibility best practices
-keypoints:
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints
 - Data visualization turns numbers into stories that the human brain can understand quickly.
 - Good visualizations reveal patterns, trends, and outliers that are invisible in spreadsheets.
 - Poor design can mislead audiences more powerfully than raw data ever could.
 - Big data demands interactive, scalable, and often multi-dimensional visualizations.
 - Choose the right tool for your audience and skill level — start simple and iterate.
 - Always prioritize clarity, honesty, and accessibility over visual flair.
----
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## What Is Data Visualization?
 
@@ -158,23 +164,15 @@ Data visualization is not decoration — it is **analysis made visible**.
 Mastering it will transform how you explore data, how you communicate results, and how much impact your work has.
 
 In the next episodes we will:
-- Build your first publication-ready plots in Python
-- Create interactive dashboards
-- Learn how to critique and improve existing visualizations
-- Combine visualization with statistical analysis
+- Build your first publication-ready plots in Python.
+- Learn how to critique and improve existing visualizations.
+- Combine visualization with statistical analysis.
 
 ---
 
 **Exercise (30 min)**  
-1. Open the file `exercises/02-bad-visualizations.md`  
-2. Look at the three provided "bad" charts and rewrite their titles, fix scales, and suggest better chart types.  
-3. (Optional) Recreate one of them using the tool of your choice and compare.
+1. Open the google collab file in `Start Here` Module [here](https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb). Make sure to make your own copy to save progress! 
 
-**References & Further Reading**  
-- Edward Tufte — *The Visual Display of Quantitative Information*  
-- Alberto Cairo — *The Functional Art*  
-- Claus O. Wilke — *Fundamentals of Data Visualization* (free online)  
-- Data Carpentry lessons on plotting  
-- ColorBrewer2.org for palettes
+2. Alternatively refer the Bad and Good Plotting techniques in this module. Understand what the basic requirements of producing a good plot looks like. 
 
-Ready to start plotting? Move on to the next episode: **"Creating Your First Plots with Matplotlib and Seaborn"**.
+---
