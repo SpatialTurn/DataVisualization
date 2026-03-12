@@ -172,7 +172,6 @@ In the next episodes we will:
 
 **Exercise (30 min)**  
 1. Open the google collab file in `Start Here` Module [here](https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb). Make sure to make your own copy to save progress! 
-
-2. Alternatively refer the Bad and Good Plotting techniques in this module. Understand what the basic requirements of producing a good plot looks like. 
+2. Alternatively, refer the Bad and Good Plotting techniques in this module. Understand what the basic requirements of producing a good plot looks like. 
 
 ---
