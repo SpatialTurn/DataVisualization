@@ -208,8 +208,13 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#data-sets">Data Sets</a></li>
-<li><a href="#software-setup">Software Setup</a></li>
+        <ul><li><a href="#overview">Overview</a></li>
+<li><a href="#option-1-google-colab-zero-installation-recommended-for-most-learners">Option 1: Google Colab (Zero Installation – Recommended for Most
+Learners)</a></li>
+<li><a href="#advantages-of-colab-for-this-workshop">Advantages of Colab for this workshop</a></li>
+<li><a href="#option-2-local-installation-anaconda-navigator-for-offline-advanced-use">Option 2: Local Installation (Anaconda Navigator – For Offline /
+Advanced Use)</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -284,77 +289,118 @@ any links that you are not going to use.
  -->
 
 
-      <section id="setup"><p>FIXME: Setup instructions live in this document. Please specify the
-tools and the data sets the Learner needs to have installed.</p>
-<section><h2 class="section-heading" id="data-sets">Data Sets<a class="anchor" aria-label="anchor" href="#data-sets"></a></h2>
-<hr class="half-width"><!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
---><p>Download the <a href="https://example.com/FIXME" class="external-link">data zip file</a>
-and unzip it to your Desktop</p>
-</section><section><h2 class="section-heading" id="software-setup">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a></h2>
-<hr class="half-width"><div id="details" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+      <section id="setup"><section><h2 class="section-heading" id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a></h2>
+<hr class="half-width"><p>To participate in the <strong>Data Visualization</strong> module, you
+will need:</p>
+<ul><li>
+<strong>Python 3.10 or newer</strong> (3.11–3.12 recommended in
+local setups)</li>
+<li>The following Python packages:
+<ul><li>pandas (data handling)</li>
+<li>matplotlib (core plotting)</li>
+<li>seaborn (statistical visualizations)</li>
+<li>(optional but recommended) jupyterlab or notebook (interactive
+work)</li>
+<li>(optional) plotly (interactive charts in later episodes)</li>
+</ul></li>
+<li>A code editor or notebook interface</li>
+<li>Sample datasets (provided as a zip file)</li>
+</ul><p>We offer <strong>two main setup paths</strong>:</p>
+<ol style="list-style-type: decimal"><li>
+<strong>Google Colab</strong> (recommended for beginners / no
+installation needed)</li>
+<li>
+<strong>Local installation</strong> with
+<code>Anaconda Navigator</code> (great for offline work and full
+control)</li>
+</ol></section><section><h2 class="section-heading" id="option-1-google-colab-zero-installation-recommended-for-most-learners">Option 1: Google Colab (Zero Installation – Recommended for Most
+Learners)<a class="anchor" aria-label="anchor" href="#option-1-google-colab-zero-installation-recommended-for-most-learners"></a></h2>
+<hr class="half-width"><p>Google Colab is a free, cloud-based Jupyter notebook environment
+hosted by Google. It runs entirely in your browser, requires only a
+Google account, and comes with pandas, matplotlib, seaborn, and many
+other data science libraries <strong>pre-installed</strong>.</p>
+<div class="section level3">
+<h3 id="steps">Steps<a class="anchor" aria-label="anchor" href="#steps"></a></h3>
+<ol style="list-style-type: decimal"><li><p>Go to → <a href="https://colab.research.google.com" class="external-link uri">https://colab.research.google.com</a></p></li>
+<li><p>Sign in with your Google account (or create one if
+needed).</p></li>
+<li><p>Click <strong>New notebook</strong> (or File → New
+notebook).</p></li>
+<li><p>(Optional) Rename it: File → Rename (e.g., “Data Viz Workshop –
+Aniket”).</p></li>
+<li>
+<p>Test the libraries right away by running this in the first cell
+(Shift+Enter to execute):</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px   <span class="co"># optional – usually pre-installed too</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"pandas version:"</span>, pd.__version__)</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"matplotlib version:"</span>, plt.matplotlib.__version__)</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"seaborn version:"</span>, sns.__version__)</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"plotly version:"</span>, px.__version__ <span class="cf">if</span> <span class="st">'px'</span> <span class="kw">in</span> <span class="bu">globals</span>() <span class="cf">else</span> <span class="st">"not imported"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="co"># Quick test plot (should show inline)</span></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>tips <span class="op">=</span> sns.load_dataset(<span class="st">"tips"</span>)  <span class="co"># built-in Seaborn dataset</span></span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>sns.histplot(data<span class="op">=</span>tips, x<span class="op">=</span><span class="st">"total_bill"</span>, hue<span class="op">=</span><span class="st">"time"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>plt.title(<span class="st">"Test: Restaurant Tips Distribution"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
-<span class="callout-header">Discussion</span>
-<div id="details" class="callout-inner">
-<h3 class="callout-title">Details</h3>
-<div class="callout-content">
-<p>Setup for different systems can be presented in dropdown menus via a
-<code>spoiler</code> tag. They will join to this discussion block, so
-you can give a general overview of the software used in this lesson here
-and fill out the individual operating systems (and potentially add more,
-e.g. online setup) in the solutions blocks.</p>
+</li>
+<li><p>Installing extra packages (rarely needed, but if something is
+missing or outdated):Python</p></li>
+</ol><div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">--</span>upgrade seaborn plotly</span></code></pre>
 </div>
+<p>(The <code>!</code> runs shell commands in Colab/Jupyter
+Notebook.)</p>
 </div>
+</section><section><h2 class="section-heading" id="advantages-of-colab-for-this-workshop">Advantages of Colab for this workshop<a class="anchor" aria-label="anchor" href="#advantages-of-colab-for-this-workshop"></a></h2>
+<hr class="half-width"><ul><li>No software installation</li>
+<li>Free GPU/TPU if needed later</li>
+<li>Easy sharing (File → Share)</li>
+<li>Autosaves to Google Drive</li>
+<li>Perfect for following along with instructor demos</li>
+</ul><p><strong>Tip</strong>: Upload your own data files via the left sidebar
+(Files tab → Upload) or mount Google Drive: Python</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co"># Then read files like pd.read_csv('/content/drive/MyDrive/penguins.csv')</span></span></code></pre>
 </div>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">
-  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  Windows
-  </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
-<div class="accordion-body">
-<p>Use PuTTY</p>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">
-  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  MacOS
-  </h3>
-</button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
-<div class="accordion-body">
-<p>Use Terminal.app</p>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
-  <h3 class="accordion-header" id="headingSpoiler3">
-  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  Linux
-  </h3>
-</button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
-<div class="accordion-body">
-<p>Use Terminal</p>
-</div>
-</div>
-</div>
-</div>
+</section><section><h2 class="section-heading" id="option-2-local-installation-anaconda-navigator-for-offline-advanced-use">Option 2: Local Installation (Anaconda Navigator – For Offline /
+Advanced Use)<a class="anchor" aria-label="anchor" href="#option-2-local-installation-anaconda-navigator-for-offline-advanced-use"></a></h2>
+<hr class="half-width"><p>Use this if you prefer working without internet or need a persistent
+environment.</p>
+<ol style="list-style-type: decimal"><li>Download and install Anaconda Navigator:</li>
+</ol><ul><li><a href="https://www.anaconda.com/products/navigator" class="external-link uri">https://www.anaconda.com/products/navigator</a></li>
+<li>Choose your OS installer (Python 3.x version) → follow defaults</li>
+</ul><ol start="2" style="list-style-type: decimal"><li>You should find multiple apps after installation.</li>
+</ol><ul><li>Launch <code>Jupyter Notebook</code>
+</li>
+<li>If you do not find a package simply add <code>!pip</code> followed
+by the name of the package in code cell to install it locally.</li>
+</ul></section><section><h2 class="section-heading" id="troubleshooting">Troubleshooting<a class="anchor" aria-label="anchor" href="#troubleshooting"></a></h2>
+<hr class="half-width"><ul><li>
+<strong>Colab:</strong> Plots not showing? Add %matplotlib inline at
+the top (usually automatic).</li>
+<li>
+<strong>Local:</strong> package not found: Open terminal or code
+cell in jupyter notebook and <code>!pip</code> install package.</li>
+<li>
+<strong>Need help?</strong> Raise hand during workshop or check
+Carpentries Python setup guide.</li>
+</ul><p>You’re all set! Proceed to Introduction to Data Visualization or
+Creating Your First Plots.</p>
+<p>Happy visualizing!</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
