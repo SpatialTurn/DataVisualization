@@ -182,3 +182,5 @@ In the next episodes we will:
 | Lesson            | Overview                                                                                                   |
 |-------------------|------------------------------------------------------------------------------------------------------------|
 | <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/goodbadplotting.ipynb" target="_blank">Beginner</a>  | Basics of Good & Bad Plotting |
+| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/complexvisuals.ipynb" target="_blank">Intermediate</a>  | Basics of More Complex Visuals |
+| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/.ipynb" target="_blank">Complex</a>  | Basics of 3D Visuals |
