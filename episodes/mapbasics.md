@@ -145,7 +145,7 @@ All projections introduce distortion in:
 
 ![Examples of different projections and their names with each having its pros and cons. Each have their own usage to best represent a specific data.](projections.png "Different Projected Maps")
 
-Check [here](https://thetruesize.com/#?borders=1~!MTQ0MTQxNzQ.MzE5MDM0NQ*MzMyMDA2Mzk(NjIwMDYzOQ~!CONTIGUOUS_US*MTAwMjQwNzU.MjUwMjM1MTc(MTc1)MQ~!IN*NDMzNzg1.MTIxNjQ4Nzk)Mg~!CN*OTkyMTY5Nw.NzMxNDcwNQ(MjI1)Mw){:target="_blank"} to play around how `Mercator` Projection effects size of countries. You can move each countries across latitudes to compare its true size with another country. 
+Check [here](https://thetruesize.com/#?borders=1~!MTQ0MTQxNzQ.MzE5MDM0NQ*MzMyMDA2Mzk(NjIwMDYzOQ~!CONTIGUOUS_US*MTAwMjQwNzU.MjUwMjM1MTc(MTc1)MQ~!IN*NDMzNzg1.MTIxNjQ4Nzk)Mg~!CN*OTkyMTY5Nw.NzMxNDcwNQ(MjI1)Mw) to play around how `Mercator` Projection effects size of countries. You can move each countries across latitudes to compare its true size with another country. 
 
 **Tip:** Try selecting `Russia` and drag it all the way down to where `Africa` is. You will be amazed by the result!
 
