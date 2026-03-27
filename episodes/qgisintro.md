@@ -96,7 +96,7 @@ If a panel is missing, enable it via:
 
 ## Loading Your First Dataset
 
-We will start with a simple dataset (e.g., shapefile or GeoJSON). You can find a sample dataset [here](https://github.com/qgis/QGIS-Sample-Data/tree/master/qgis_sample_data, target="_blank")
+We will start with a simple dataset (e.g., shapefile or GeoJSON). You can find a sample dataset [here](https://github.com/qgis/QGIS-Sample-Data/tree/master/qgis_sample_data)
 
 ### Step 1: Add a Vector Layer
 
