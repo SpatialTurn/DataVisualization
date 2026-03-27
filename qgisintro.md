@@ -136,6 +136,8 @@ For our example, we will use `airport.shp` in the shapefiles folder in the link.
 
 This table contains the data behind your map.
 
+#### Note: Make sure to save the project at regular intervals to save your progress!
+
 ---
 
 ## Styling Your First Map
@@ -150,6 +152,9 @@ This table contains the data behind your map.
 ### Step 2: Choose a Style
 
 ![You can change marker size, symbols, transparency etc. Make your map visually good such that it is clear to viewer!](symbology.png "Airport Map Alaska")
+
+- Set the `Magnifier` at the bottom of the Map Panel to 75%.
+- To change layer name right click on the Layer → Properties → Source → Change Layer Name and apply. This is important as later this reflects the naming of the Legend when exporting the map. 
 
 ### Common styling options:
 
@@ -168,18 +173,6 @@ This table contains the data behind your map.
 
 ---
 
-## Adding a Basemap (Optional)
-
-Basemaps provide geographic context.
-
-### Option: Use XYZ Tiles
-
-1. In Browser Panel → Right-click **XYZ Tiles**
-2. Select a source (e.g., OpenStreetMap)
-3. Drag it into the map
-
----
-
 ## Creating a Map Layout
 
 To export your map, use the **Print Layout**.
@@ -193,7 +186,7 @@ To export your map, use the **Print Layout**.
 
 ### Step 2: Add Map
 
-- Click **Add Map**
+- Click Add Item then **Add Map**
 - Draw a rectangle on the page
 
 ---
@@ -201,14 +194,15 @@ To export your map, use the **Print Layout**.
 ### Step 3: Add Map Elements
 
 
-::contentReference[oaicite:2]{index=2}
+![Add all the necessary map items as mentioned in the previous module. Your map needs to convey information as clearly as possible.](additemmap.png "Map Elements")
 
 
 Include:
-- **Title**
+- **Title**, Add Item → Add Label → Draw Rectangle on top of map
 - **Legend**
 - **Scale Bar**
 - **North Arrow**
+- Add Metadata (who created the map?). Do this at the bottom of the map
 
 ---
 
@@ -217,12 +211,16 @@ Include:
 ### Step 1: Export
 
 - In layout window:
-  - **Export as PNG**
+  - **Export as Image**
   - **Export as PDF**
+
+- You can leave the default options and click ok. 
 
 ### Step 2: Save Your Project
 
 - Always save your QGIS project file (`.qgz`)
+
+![This is the map we came up with for representing Airports in Alaska.](airportmap.png "Alaska Airport Map")
 
 ---
 
@@ -231,7 +229,7 @@ Include:
 - Forgetting to save the project
 - Using raw counts instead of normalized data
 - Overcomplicating symbology
-- Ignoring legends and labels
+- Ignoring legends and labels/naming
 
 ::::::::::::::::::::::::::::::::::::: callout
 
