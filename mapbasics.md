@@ -97,6 +97,8 @@ Color choice is critical for readability and accuracy.
 - **Diverging** → values around a midpoint (e.g., blue–white–red)
 - **Categorical** → distinct groups
 
+![Examples of different color palettes with each having its own unique usage. If not used correctly, the representation of a dataset can be inaccurate.](colorpallete.png "Different Color Maps")
+
 ### Best practices:
 - Avoid overly bright or clashing colors
 - Use colorblind-friendly palettes
@@ -140,6 +142,12 @@ All projections introduce distortion in:
 - Equal-area → preserves area
 - Conformal → preserves shape
 - Equidistant → preserves distance
+
+![Examples of different projections and their names with each having its pros and cons. Each have their own usage to best represent a specific data.](projections.png "Different Projected Maps")
+
+Check [here](https://thetruesize.com/#?borders=1~!MTQ0MTQxNzQ.MzE5MDM0NQ*MzMyMDA2Mzk(NjIwMDYzOQ~!CONTIGUOUS_US*MTAwMjQwNzU.MjUwMjM1MTc(MTc1)MQ~!IN*NDMzNzg1.MTIxNjQ4Nzk)Mg~!CN*OTkyMTY5Nw.NzMxNDcwNQ(MjI1)Mw) to play around how `Mercator` Projection effects size of countries. You can move each countries across latitudes to compare its true size with another country. 
+
+**Tip:** Try selecting `Russia` and drag it all the way down to where `Africa` is. You will be amazed by the result!
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -244,10 +252,14 @@ Show multiple variables at once.
 - Best for print and reports
 - Easier to control design
 
+The map images that we have shown above are all examples of static maps. 
+
 ### Interactive (Web) Maps:
 - Allow zooming, filtering, tooltips
 - Ideal for exploration
 - Require more development effort
+
+See [here](https://spatialturn.github.io/). Scroll down and you should see an interactive map of West Lafayette that we implemented in our website!
 
 ### What is a Web Map?
 
