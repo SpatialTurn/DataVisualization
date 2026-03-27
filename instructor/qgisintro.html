@@ -437,13 +437,29 @@ etc.)</li>
 </section><section><h2 class="section-heading" id="loading-your-first-dataset">Loading Your First Dataset<a class="anchor" aria-label="anchor" href="#loading-your-first-dataset"></a></h2>
 <hr class="half-width"><p>We will start with a simple dataset (e.g., shapefile or GeoJSON). You
 can find a sample dataset <a href="https://github.com/qgis/QGIS-Sample-Data/tree/master/qgis_sample_data" class="external-link">here</a></p>
+<p>For our example, we will use <code>airport.shp</code> in the
+shapefiles folder in the link. Along with the .shp file make sure to
+download its supporting files to load in the .shp correctly. They
+are:</p>
+<ul><li>airports.cpg</li>
+<li>airports.dbf</li>
+<li>airports.prj</li>
+<li>airports.shx</li>
+</ul><div class="section level3">
+<h3 id="step-0-add-base-map">Step 0: Add Base Map<a class="anchor" aria-label="anchor" href="#step-0-add-base-map"></a></h3>
+<ol style="list-style-type: decimal"><li>In the Browser Panel click on <code>XYZ Tiles</code>.</li>
+<li>You should see 2 options: Global Terrain and Open Street Map.</li>
+<li>Right click on Open Street Map and Add Layer to Project.</li>
+<li>You should now see a world map on you Map Panel.</li>
+</ol></div>
 <div class="section level3">
 <h3 id="step-1-add-a-vector-layer">Step 1: Add a Vector Layer<a class="anchor" aria-label="anchor" href="#step-1-add-a-vector-layer"></a></h3>
-<ol style="list-style-type: decimal"><li>Go to: <strong>Layer → Add Layer → Add Vector Layer</strong>
-</li>
+<ol style="list-style-type: decimal"><li>Go to: <strong>Layer → Add Layer → Add Vector Layer</strong>. Since
+we are working with point data here.</li>
 <li>Browse to your dataset</li>
-<li>Click <strong>Add</strong>
-</li>
+<li>Click <strong>Add</strong> or double click on the file.</li>
+<li>(If Applicable), drag the airports layer above the Open Street Map
+Layer since you want the points on top of the world map.</li>
 </ol><hr></div>
 <div class="section level3">
 <h3 id="step-2-view-the-data">Step 2: View the Data<a class="anchor" aria-label="anchor" href="#step-2-view-the-data"></a></h3>
@@ -456,6 +472,7 @@ can find a sample dataset <a href="https://github.com/qgis/QGIS-Sample-Data/tree
 <ol style="list-style-type: decimal"><li>Right-click the layer</li>
 <li>Click <strong>Open Attribute Table</strong>
 </li>
+<li>You should see 76 entries for number of airports in Alaska.</li>
 </ol><p>This table contains the data behind your map.</p>
 <hr></div>
 </section><section><h2 class="section-heading" id="styling-your-first-map">Styling Your First Map<a class="anchor" aria-label="anchor" href="#styling-your-first-map"></a></h2>
@@ -467,8 +484,10 @@ can find a sample dataset <a href="https://github.com/qgis/QGIS-Sample-Data/tree
 </ul><hr></div>
 <div class="section level3">
 <h3 id="step-2-choose-a-style">Step 2: Choose a Style<a class="anchor" aria-label="anchor" href="#step-2-choose-a-style"></a></h3>
-<p>::contentReference<span index="1">oaicite:1</span></p>
-</div>
+<figure><img src="../symbology.png" title="Airport Map Alaska" alt="You can change marker size, symbols, transparency etc. Make your map visually good such that it is clear to viewer!" class="figure mx-auto d-block"><div class="figcaption">You can change marker size, symbols,
+transparency etc. Make your map visually good such that it is clear to
+viewer!</div>
+</figure></div>
 <div class="section level3">
 <h3 id="common-styling-options">Common styling options:<a class="anchor" aria-label="anchor" href="#common-styling-options"></a></h3>
 <ul><li>
@@ -479,8 +498,10 @@ can find a sample dataset <a href="https://github.com/qgis/QGIS-Sample-Data/tree
 <strong>Graduated</strong> → color ramp for numeric data</li>
 </ul><hr></div>
 <div class="section level3">
-<h3 id="step-3-apply-colors">Step 3: Apply Colors<a class="anchor" aria-label="anchor" href="#step-3-apply-colors"></a></h3>
-<ul><li>Choose a color ramp</li>
+<h3 id="step-3-apply-colors-applicable-if-working-with-a-lot-more-data-like-elevation-climate-data">Step 3: Apply Colors (Applicable if working with a lot more data
+like elevation, climate data)<a class="anchor" aria-label="anchor" href="#step-3-apply-colors-applicable-if-working-with-a-lot-more-data-like-elevation-climate-data"></a></h3>
+<ul><li>Try downloading the <code>elevp</code> file in csv folder</li>
+<li>Choose a color ramp</li>
 <li>Adjust classes (for graduated maps)</li>
 <li>Click <strong>Apply</strong>
 </li>
