@@ -182,9 +182,9 @@ Incomplete data can lead to misleading maps.
 ### Example:
 Mapping income without population density may mislead conclusions.
 
-![This is a good map but needs supporting information to better understand this distribution of income across the country. Red here indicates higher income.](incomemap.png "A map household income data in the U.S in 2021.")
+![This is a good map but needs supporting information to better understand this distribution of income across the country. Green here indicates higher income.](incomemap.png "A map household income data in the U.S in 2021.")
 
-![This population density map is in positive correlation with the map. As in, a higher population density would ideally mean a greater household income in that county. Bolder colors indicate greater population density.](popden.png "A map household income data in the U.S in 2021.")
+![This population density map is in positive correlation with the map. As in, a higher population density would ideally mean a greater household income in that county. Lighter colors indicate greater population density.](popden.png "A map household income data in the U.S in 2021.")
 
 ---
 
