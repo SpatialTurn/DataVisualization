@@ -37,6 +37,9 @@ A good map:-
 - Accurately represents data
 - Is easy to interpret
 - Minimizes misleading elements
+- **Has all the key map elements**
+
+![To have every map element is necessary to convey the correct information to the audience. You do not want to mislead the audience/observer.](mapelements.png "Map Elements")
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -324,11 +327,20 @@ Classification determines how numeric data is grouped into categories.
 | Natural Breaks    | Uneven, clustered data                 |
 | Standard Deviation| Highlighting anomalies/outliers        |
 
+**Beginner Recommendation:** Start with Natural Breaks (Jenks) — it usually gives the most honest visual pattern.
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 You are mapping income data with strong clustering.  
 Which classification method would you choose and why?
 
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+You have U.S. county median household income data ranging from $25k to $150k with a strong cluster around $55k–$70k.
+
+Which `classification` method would you choose and why?
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ---
