@@ -249,7 +249,6 @@
 <li><a href="#understanding-the-qgis-interface">Understanding the QGIS Interface</a></li>
 <li><a href="#loading-your-first-dataset">Loading Your First Dataset</a></li>
 <li><a href="#styling-your-first-map">Styling Your First Map</a></li>
-<li><a href="#adding-a-basemap-optional">Adding a Basemap (Optional)</a></li>
 <li><a href="#creating-a-map-layout">Creating a Map Layout</a></li>
 <li><a href="#exporting-your-map">Exporting Your Map</a></li>
 <li><a href="#common-beginner-mistakes">Common Beginner Mistakes</a></li>
@@ -474,7 +473,11 @@ Layer since you want the points on top of the world map.</li>
 </li>
 <li>You should see 76 entries for number of airports in Alaska.</li>
 </ol><p>This table contains the data behind your map.</p>
+<div class="section level4">
+<h4 id="note-make-sure-to-save-the-project-at-regular-intervals-to-save-your-progress">Note: Make sure to save the project at regular intervals to save
+your progress!<a class="anchor" aria-label="anchor" href="#note-make-sure-to-save-the-project-at-regular-intervals-to-save-your-progress"></a></h4>
 <hr></div>
+</div>
 </section><section><h2 class="section-heading" id="styling-your-first-map">Styling Your First Map<a class="anchor" aria-label="anchor" href="#styling-your-first-map"></a></h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="step-1-open-layer-properties">Step 1: Open Layer Properties<a class="anchor" aria-label="anchor" href="#step-1-open-layer-properties"></a></h3>
@@ -487,7 +490,12 @@ Layer since you want the points on top of the world map.</li>
 <figure><img src="../symbology.png" title="Airport Map Alaska" alt="You can change marker size, symbols, transparency etc. Make your map visually good such that it is clear to viewer!" class="figure mx-auto d-block"><div class="figcaption">You can change marker size, symbols,
 transparency etc. Make your map visually good such that it is clear to
 viewer!</div>
-</figure></div>
+</figure><ul><li>Set the <code>Magnifier</code> at the bottom of the Map Panel to
+75%.</li>
+<li>To change layer name right click on the Layer → Properties → Source
+→ Change Layer Name and apply. This is important as later this reflects
+the naming of the Legend when exporting the map.</li>
+</ul></div>
 <div class="section level3">
 <h3 id="common-styling-options">Common styling options:<a class="anchor" aria-label="anchor" href="#common-styling-options"></a></h3>
 <ul><li>
@@ -506,15 +514,6 @@ like elevation, climate data)<a class="anchor" aria-label="anchor" href="#step-3
 <li>Click <strong>Apply</strong>
 </li>
 </ul><hr></div>
-</section><section><h2 class="section-heading" id="adding-a-basemap-optional">Adding a Basemap (Optional)<a class="anchor" aria-label="anchor" href="#adding-a-basemap-optional"></a></h2>
-<hr class="half-width"><p>Basemaps provide geographic context.</p>
-<div class="section level3">
-<h3 id="option-use-xyz-tiles">Option: Use XYZ Tiles<a class="anchor" aria-label="anchor" href="#option-use-xyz-tiles"></a></h3>
-<ol style="list-style-type: decimal"><li>In Browser Panel → Right-click <strong>XYZ Tiles</strong>
-</li>
-<li>Select a source (e.g., OpenStreetMap)</li>
-<li>Drag it into the map</li>
-</ol><hr></div>
 </section><section><h2 class="section-heading" id="creating-a-map-layout">Creating a Map Layout<a class="anchor" aria-label="anchor" href="#creating-a-map-layout"></a></h2>
 <hr class="half-width"><p>To export your map, use the <strong>Print Layout</strong>.</p>
 <div class="section level3">
@@ -525,33 +524,40 @@ like elevation, climate data)<a class="anchor" aria-label="anchor" href="#step-3
 </ul><hr></div>
 <div class="section level3">
 <h3 id="step-2-add-map">Step 2: Add Map<a class="anchor" aria-label="anchor" href="#step-2-add-map"></a></h3>
-<ul><li>Click <strong>Add Map</strong>
+<ul><li>Click Add Item then <strong>Add Map</strong>
 </li>
 <li>Draw a rectangle on the page</li>
 </ul><hr></div>
 <div class="section level3">
 <h3 id="step-3-add-map-elements">Step 3: Add Map Elements<a class="anchor" aria-label="anchor" href="#step-3-add-map-elements"></a></h3>
-<p>::contentReference<span index="2">oaicite:2</span></p>
-<p>Include: - <strong>Title</strong> - <strong>Legend</strong> -
-<strong>Scale Bar</strong> - <strong>North Arrow</strong></p>
+<figure><img src="../additemmap.png" title="Map Elements" alt="Add all the necessary map items as mentioned in the previous module. Your map needs to convey information as clearly as possible." class="figure mx-auto d-block"><div class="figcaption">Add all the necessary map items as mentioned in
+the previous module. Your map needs to convey information as clearly as
+possible.</div>
+</figure><p>Include: - <strong>Title</strong>, Add Item → Add Label → Draw
+Rectangle on top of map - <strong>Legend</strong> - <strong>Scale
+Bar</strong> - <strong>North Arrow</strong> - Add Metadata (who created
+the map?). Do this at the bottom of the map</p>
 <hr></div>
 </section><section><h2 class="section-heading" id="exporting-your-map">Exporting Your Map<a class="anchor" aria-label="anchor" href="#exporting-your-map"></a></h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="step-1-export">Step 1: Export<a class="anchor" aria-label="anchor" href="#step-1-export"></a></h3>
 <ul><li>In layout window:
-<ul><li><strong>Export as PNG</strong></li>
+<ul><li><strong>Export as Image</strong></li>
 <li><strong>Export as PDF</strong></li>
 </ul></li>
+<li>You can leave the default options and click ok.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="step-2-save-your-project">Step 2: Save Your Project<a class="anchor" aria-label="anchor" href="#step-2-save-your-project"></a></h3>
 <ul><li>Always save your QGIS project file (<code>.qgz</code>)</li>
-</ul><hr></div>
+</ul><figure><img src="../airportmap.png" title="Alaska Airport Map" alt="This is the map we came up with for representing Airports in Alaska." class="figure mx-auto d-block"><div class="figcaption">This is the map we came up with for representing
+Airports in Alaska.</div>
+</figure><hr></div>
 </section><section><h2 class="section-heading" id="common-beginner-mistakes">Common Beginner Mistakes<a class="anchor" aria-label="anchor" href="#common-beginner-mistakes"></a></h2>
 <hr class="half-width"><ul><li>Forgetting to save the project</li>
 <li>Using raw counts instead of normalized data</li>
 <li>Overcomplicating symbology</li>
-<li>Ignoring legends and labels</li>
+<li>Ignoring legends and labels/naming</li>
 </ul><div id="keep-it-simple" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
