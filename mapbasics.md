@@ -312,6 +312,9 @@ Classification determines how numeric data is grouped into categories.
 
 ---
 
+![See how choropleth map is effected when using different classifications. Each classification as a certain use case scenario.](classifications.png "Different Classifications Grid Map")
+
+
 ## Choosing the Right Classification
 
 | Method             | Best Use Case                          |
