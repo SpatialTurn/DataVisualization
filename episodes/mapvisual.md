@@ -114,7 +114,7 @@ Maps are not neutral — design choices influence interpretation.
 - Dark colors may imply higher importance
 - Certain color schemes may exclude colorblind users
 
-![Bad USA Map](badmap.png "A map showing bad colors being used to represent a data.")
+![Bad USA Map](badmap.jpg "A map showing bad colors being used to represent a data.")
 
 ---
 
