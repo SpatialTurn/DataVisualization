@@ -73,6 +73,8 @@ Every map should answer a clear question.
 ### Good Example:
 > "This map shows areas at highest risk of flooding."
 
+![Flood-Risk USA Map](floodrisk.png "A map showing projected flood risk changes in the USA between 2020 and 2050.")
+
 ---
 
 ## 3. Choose the Right Data Attributes
