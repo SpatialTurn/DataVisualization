@@ -68,6 +68,7 @@ contact: 'team@carpentries.org' # FIXME
 episodes: 
 - introduction.md
 - mapvisual.md
+- mapbasics.md
 
 # Information for Learners
 learners: 

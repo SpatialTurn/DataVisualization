@@ -265,6 +265,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="mapbasics.html">3. Fundamentals of Map Design</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -1148,6 +1160,468 @@ What did it do well? What could be improved?</p></li>
 audience?</p></li>
 <li><p>Share an example of a map that misled you (or succeeded
 brilliantly) and why.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-mapbasics"><p>Content from <a href="mapbasics.html">Fundamentals of Map Design</a></p>
+<hr>
+<p>Last updated on 2026-03-27 |
+
+        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/mapbasics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What is a map and what makes it effective?</li>
+<li>How do visual hierarchy and design influence interpretation?</li>
+<li>How should colors and symbols be used in maps?</li>
+<li>What are map scales and projections, and why do they matter?</li>
+<li>What are common thematic map types and when should you use
+them?</li>
+<li>Should your map be static or interactive?</li>
+<li>How should data be classified for choropleth maps?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Understand the core components of a map</li>
+<li>Apply visual hierarchy principles to improve clarity</li>
+<li>Choose appropriate colors, scales, and projections</li>
+<li>Identify and use different thematic map types</li>
+<li>Decide between static and interactive maps</li>
+<li>Select appropriate classification methods for data</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="what-is-a-map">What is a Map?<a class="anchor" aria-label="anchor" href="#what-is-a-map"></a>
+</h2>
+<hr class="half-width">
+<p>A <strong>map</strong> is a visual representation of spatial data
+designed to communicate information about locations, patterns, and
+relationships.</p>
+<p>A good map: - Has a clear purpose - Accurately represents data - Is
+easy to interpret - Minimizes misleading elements</p>
+<div id="key-idea" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="key-idea" class="callout-inner">
+<h3 class="callout-title">Key Idea</h3>
+<div class="callout-content">
+<p>A map is not just a picture — it is a <strong>communication
+tool</strong>.</p>
+</div>
+</div>
+</div>
+<hr></section><section><h2 class="section-heading" id="visual-hierarchy">Visual Hierarchy<a class="anchor" aria-label="anchor" href="#visual-hierarchy"></a>
+</h2>
+<hr class="half-width">
+<p>Visual hierarchy controls what the viewer sees first, second, and
+last.</p>
+<div class="section level3">
+<h3 id="how-to-create-hierarchy">How to create hierarchy:<a class="anchor" aria-label="anchor" href="#how-to-create-hierarchy"></a>
+</h3>
+<ul>
+<li>
+<strong>Size</strong> → larger elements draw attention</li>
+<li>
+<strong>Color</strong> → brighter or contrasting colors stand
+out</li>
+<li>
+<strong>Position</strong> → central elements are noticed first</li>
+<li>
+<strong>Contrast</strong> → strong differences highlight
+importance</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="example">Example:<a class="anchor" aria-label="anchor" href="#example"></a>
+</h3>
+<ul>
+<li>Main data layer → bold colors</li>
+<li>Background (basemap) → muted tones</li>
+<li>Labels → readable but not overpowering</li>
+</ul>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Look at a map and ask: What do you notice first? Is that what the
+mapmaker intended?</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="variables-in-mapping">Variables in Mapping<a class="anchor" aria-label="anchor" href="#variables-in-mapping"></a>
+</h2>
+<hr class="half-width">
+<p>Cartographic variables (visual variables) represent data
+visually.</p>
+<div class="section level3">
+<h3 id="common-variables">Common variables:<a class="anchor" aria-label="anchor" href="#common-variables"></a>
+</h3>
+<ul>
+<li>Color (hue, lightness)</li>
+<li>Size</li>
+<li>Shape</li>
+<li>Orientation</li>
+<li>Texture</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="use-cases">Use cases:<a class="anchor" aria-label="anchor" href="#use-cases"></a>
+</h3>
+<ul>
+<li>
+<strong>Quantitative data</strong> → size, lightness</li>
+<li>
+<strong>Categorical data</strong> → distinct colors, shapes</li>
+</ul>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="colors-on-maps">Colors on Maps<a class="anchor" aria-label="anchor" href="#colors-on-maps"></a>
+</h2>
+<hr class="half-width">
+<p>Color choice is critical for readability and accuracy.</p>
+<div class="section level3">
+<h3 id="types-of-color-schemes">Types of color schemes:<a class="anchor" aria-label="anchor" href="#types-of-color-schemes"></a>
+</h3>
+<ul>
+<li>
+<strong>Sequential</strong> → low to high values (e.g., light →
+dark)</li>
+<li>
+<strong>Diverging</strong> → values around a midpoint (e.g.,
+blue–white–red)</li>
+<li>
+<strong>Categorical</strong> → distinct groups</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="best-practices">Best practices:<a class="anchor" aria-label="anchor" href="#best-practices"></a>
+</h3>
+<ul>
+<li>Avoid overly bright or clashing colors</li>
+<li>Use colorblind-friendly palettes</li>
+<li>Ensure contrast between classes</li>
+</ul>
+<div id="tip" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="tip" class="callout-inner">
+<h3 class="callout-title">Tip</h3>
+<div class="callout-content">
+<p>Use lighter colors for lower values and darker colors for higher
+values in most cases.</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="scale">Scale<a class="anchor" aria-label="anchor" href="#scale"></a>
+</h2>
+<hr class="half-width">
+<p>Map scale defines the relationship between distance on the map and
+distance in reality.</p>
+<div class="section level3">
+<h3 id="types">Types:<a class="anchor" aria-label="anchor" href="#types"></a>
+</h3>
+<ul>
+<li>
+<strong>Large-scale maps</strong> → small area, high detail (e.g.,
+city map)</li>
+<li>
+<strong>Small-scale maps</strong> → large area, less detail (e.g.,
+world map)</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="why-it-matters">Why it matters:<a class="anchor" aria-label="anchor" href="#why-it-matters"></a>
+</h3>
+<ul>
+<li>Determines level of detail</li>
+<li>Affects interpretation of patterns</li>
+</ul>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="projections">Projections<a class="anchor" aria-label="anchor" href="#projections"></a>
+</h2>
+<hr class="half-width">
+<p>A projection transforms the Earth (a sphere) onto a flat surface.</p>
+<div class="section level3">
+<h3 id="key-issue">Key issue:<a class="anchor" aria-label="anchor" href="#key-issue"></a>
+</h3>
+<p>All projections introduce distortion in: - Area - Shape - Distance -
+Direction</p>
+</div>
+<div class="section level3">
+<h3 id="examples">Examples:<a class="anchor" aria-label="anchor" href="#examples"></a>
+</h3>
+<ul>
+<li>Equal-area → preserves area</li>
+<li>Conformal → preserves shape</li>
+<li>Equidistant → preserves distance</li>
+</ul>
+<div id="important" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="important" class="callout-inner">
+<h3 class="callout-title">Important</h3>
+<div class="callout-content">
+<p>There is no “perfect” projection — only projections suited for
+specific purposes.</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="labeling-and-legends">Labeling and Legends<a class="anchor" aria-label="anchor" href="#labeling-and-legends"></a>
+</h2>
+<hr class="half-width">
+<p>Labels and legends help users understand your map.</p>
+<div class="section level3">
+<h3 id="labels">Labels:<a class="anchor" aria-label="anchor" href="#labels"></a>
+</h3>
+<ul>
+<li>Clear and readable</li>
+<li>Avoid overlap</li>
+<li>Use hierarchy (important places larger)</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="legends">Legends:<a class="anchor" aria-label="anchor" href="#legends"></a>
+</h3>
+<ul>
+<li>Explain symbols and colors</li>
+<li>Keep simple and intuitive</li>
+<li>Include units where necessary</li>
+</ul>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="thematic-map-types">Thematic Map Types<a class="anchor" aria-label="anchor" href="#thematic-map-types"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="choropleth-maps">Choropleth Maps<a class="anchor" aria-label="anchor" href="#choropleth-maps"></a>
+</h3>
+<p>Used to show values aggregated by regions (e.g., counties,
+states).</p>
+<p>::contentReference<span index="0">oaicite:0</span></p>
+<p><strong>Best for:</strong> - Rates, ratios, normalized data (e.g.,
+per capita)</p>
+<p><strong>Avoid:</strong> - Raw counts (can mislead due to area
+size)</p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="proportional-symbol-maps">Proportional Symbol Maps<a class="anchor" aria-label="anchor" href="#proportional-symbol-maps"></a>
+</h3>
+<p>Symbols sized according to data values.</p>
+<p>::contentReference<span index="1">oaicite:1</span></p>
+<p><strong>Best for:</strong> - Comparing magnitudes across
+locations</p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="dot-density-maps">Dot Density Maps<a class="anchor" aria-label="anchor" href="#dot-density-maps"></a>
+</h3>
+<p>Dots represent occurrences or quantities.</p>
+<p>::contentReference<span index="2">oaicite:2</span></p>
+<p><strong>Best for:</strong> - Showing distribution patterns</p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="non-contiguous-cartograms">Non-Contiguous Cartograms<a class="anchor" aria-label="anchor" href="#non-contiguous-cartograms"></a>
+</h3>
+<p>Regions resized based on data values.</p>
+<p>::contentReference<span index="3">oaicite:3</span></p>
+<p><strong>Best for:</strong> - Emphasizing magnitude over geography</p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="multivariate-maps">Multivariate Maps<a class="anchor" aria-label="anchor" href="#multivariate-maps"></a>
+</h3>
+<p>Show multiple variables at once.</p>
+<p>::contentReference<span index="4">oaicite:4</span></p>
+<p><strong>Best for:</strong> - Exploring relationships between
+variables</p>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="static-vs-interactive-maps">Static vs Interactive Maps<a class="anchor" aria-label="anchor" href="#static-vs-interactive-maps"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="static-maps">Static Maps:<a class="anchor" aria-label="anchor" href="#static-maps"></a>
+</h3>
+<ul>
+<li>Fixed image</li>
+<li>Best for print and reports</li>
+<li>Easier to control design</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="interactive-web-maps">Interactive (Web) Maps:<a class="anchor" aria-label="anchor" href="#interactive-web-maps"></a>
+</h3>
+<ul>
+<li>Allow zooming, filtering, tooltips</li>
+<li>Ideal for exploration</li>
+<li>Require more development effort</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="what-is-a-web-map">What is a Web Map?<a class="anchor" aria-label="anchor" href="#what-is-a-web-map"></a>
+</h3>
+<p>A <strong>web map</strong> is an interactive map delivered through a
+browser.</p>
+<p>Examples include: - Zoomable maps - Layer toggles - Hover/click
+information</p>
+<div id="guideline" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="guideline" class="callout-inner">
+<h3 class="callout-title">Guideline</h3>
+<div class="callout-content">
+<p>Use interactive maps when users need to explore data.<br>
+Use static maps when you want to communicate a single message
+clearly.</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="data-classification-methods">Data Classification Methods<a class="anchor" aria-label="anchor" href="#data-classification-methods"></a>
+</h2>
+<hr class="half-width">
+<p>Classification determines how numeric data is grouped into
+categories.</p>
+<div class="section level3">
+<h3 id="equal-interval">Equal Interval<a class="anchor" aria-label="anchor" href="#equal-interval"></a>
+</h3>
+<ul>
+<li>Divides range into equal-sized bins</li>
+<li>Best for evenly distributed data</li>
+</ul>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="quantile">Quantile<a class="anchor" aria-label="anchor" href="#quantile"></a>
+</h3>
+<ul>
+<li>Each class has the same number of observations</li>
+<li>Best for comparing relative rankings</li>
+</ul>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="natural-breaks-jenks">Natural Breaks (Jenks)<a class="anchor" aria-label="anchor" href="#natural-breaks-jenks"></a>
+</h3>
+<ul>
+<li>Minimizes variance within classes</li>
+<li>Best for clustered data</li>
+</ul>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="standard-deviation">Standard Deviation<a class="anchor" aria-label="anchor" href="#standard-deviation"></a>
+</h3>
+<ul>
+<li>Shows deviation from the mean</li>
+<li>Best for highlighting extremes</li>
+</ul>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="choosing-the-right-classification">Choosing the Right Classification<a class="anchor" aria-label="anchor" href="#choosing-the-right-classification"></a>
+</h2>
+<hr class="half-width">
+<table class="table">
+<thead><tr class="header">
+<th>Method</th>
+<th>Best Use Case</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Equal Interval</td>
+<td>Uniform distributions</td>
+</tr>
+<tr class="even">
+<td>Quantile</td>
+<td>Ranking/comparison</td>
+</tr>
+<tr class="odd">
+<td>Natural Breaks</td>
+<td>Uneven, clustered data</td>
+</tr>
+<tr class="even">
+<td>Standard Deviation</td>
+<td>Highlighting anomalies/outliers</td>
+</tr>
+</tbody>
+</table>
+<div id="discussion2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>You are mapping income data with strong clustering.<br>
+Which classification method would you choose and why?</p>
+</div>
+</div>
+</div>
+<hr></section><section><h2 class="section-heading" id="final-takeaways">Final Takeaways<a class="anchor" aria-label="anchor" href="#final-takeaways"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>Maps are communication tools — design intentionally</li>
+<li>Choose map types based on your data and message</li>
+<li>Use classification methods carefully to avoid misleading
+results</li>
+<li>Always consider your audience and purpose</li>
+</ul>
+<div id="discussion3" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>When might an interactive map be worse than a static map?</li>
+<li>How can classification choices change the story your map tells?</li>
 </ul>
 </div>
 </div>
