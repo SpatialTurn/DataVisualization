@@ -74,7 +74,7 @@ QGIS is widely used in academia, industry, and government — and it's completel
 ## Understanding the QGIS Interface
 
 
-::contentReference[oaicite:0]{index=0}
+![QGIS Interface Features.](qgisinterface.png "Map Elements")
 
 
 ### Key Components:
