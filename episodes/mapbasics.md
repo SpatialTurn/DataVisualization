@@ -31,7 +31,8 @@ exercises: 45
 
 A **map** is a visual representation of spatial data designed to communicate information about locations, patterns, and relationships.
 
-A good map:
+A good map:-
+
 - Has a clear purpose
 - Accurately represents data
 - Is easy to interpret
@@ -172,7 +173,8 @@ Labels and legends help users understand your map.
 Used to show values aggregated by regions (e.g., counties, states).
 
 
-::contentReference[oaicite:0]{index=0}
+![A map different states in the USA as shades of green.](choropleth.png "Choropleth Map")
+
 
 
 **Best for:**
@@ -188,7 +190,7 @@ Used to show values aggregated by regions (e.g., counties, states).
 Symbols sized according to data values.
 
 
-::contentReference[oaicite:1]{index=1}
+![A map showing varying sizes of circles as a function of population in the USA. Bigger the circle means more population.](proportional.png "Proportional Map")
 
 
 **Best for:**
@@ -201,7 +203,7 @@ Symbols sized according to data values.
 Dots represent occurrences or quantities.
 
 
-::contentReference[oaicite:2]{index=2}
+![A map showing density of a variable as a function of number of dots in an area in the USA. More dots in an area means a greater influence of that variable.](dotdensity.png "Dot Density Map")
 
 
 **Best for:**
@@ -214,7 +216,7 @@ Dots represent occurrences or quantities.
 Regions resized based on data values.
 
 
-::contentReference[oaicite:3]{index=3}
+![A map different states in the USA clearly separated by a gap in order to avoid distortion such that recognizable shapes can be made. This looks good visually.](nonconti.png "Non-Contiguous Map")
 
 
 **Best for:**
@@ -227,7 +229,7 @@ Regions resized based on data values.
 Show multiple variables at once.
 
 
-::contentReference[oaicite:4]{index=4}
+![A map showing both choropleth and dot density being implement with each showcasing a different variable best suited to it.](multivariate.png "Multivariate Map")
 
 
 **Best for:**
