@@ -352,10 +352,15 @@ explained?</li>
 <section><h2 class="section-heading" id="why-thoughtful-map-design-matters">Why Thoughtful Map Design Matters<a class="anchor" aria-label="anchor" href="#why-thoughtful-map-design-matters"></a></h2>
 <hr class="half-width"><p>Maps are powerful tools for communication. A well-designed map can
 reveal patterns, support decisions, and tell compelling stories. A
-poorly designed map can mislead, confuse, or hide important
-insights.</p>
-<p>Before making a map, it’s essential to ask the right questions.</p>
-<hr></section><section><h2 class="section-heading" id="know-your-audience">1. Know Your Audience<a class="anchor" aria-label="anchor" href="#know-your-audience"></a></h2>
+poorly designed map can mislead, confuse, or hide important insights</p>
+<p>Before making a map, it’s essential to ask the right questions. Good
+cartography follows core design principles:</p>
+<ul><li>legibility (easy to read)</li>
+<li>visual contrast (important elements stand out)</li>
+<li>figure-ground (main features pop from the background)</li>
+<li>hierarchy (what’s most important first)</li>
+<li>balance (pleasing layout without clutter)</li>
+</ul><hr></section><section><h2 class="section-heading" id="know-your-audience">1. Know Your Audience<a class="anchor" aria-label="anchor" href="#know-your-audience"></a></h2>
 <hr class="half-width"><p>Your audience determines everything about your map.</p>
 <div class="section level3">
 <h3 id="ask-yourself">Ask yourself:<a class="anchor" aria-label="anchor" href="#ask-yourself"></a></h3>
@@ -405,7 +410,8 @@ look the same.</p>
 <figure><img src="floodrisk.png" title="A map showing projected flood risk changes in the USA between 2020 and 2050." alt="Flood-Risk USA Map" class="figure mx-auto d-block"><div class="figcaption">Flood-Risk USA Map</div>
 </figure><hr></div>
 </section><section><h2 class="section-heading" id="choose-the-right-data-attributes">3. Choose the Right Data Attributes<a class="anchor" aria-label="anchor" href="#choose-the-right-data-attributes"></a></h2>
-<hr class="half-width"><p>Not all data belongs on your map.</p>
+<hr class="half-width"><p>Not all data belongs on your map. Select variables that support your
+message and are spatially meaningful.</p>
 <div class="section level3">
 <h3 id="ask-yourself-2">Ask yourself:<a class="anchor" aria-label="anchor" href="#ask-yourself-2"></a></h3>
 <ul><li>Which variable is most important?</li>
@@ -441,10 +447,15 @@ Which one would you prioritize if your goal is to show drought risk?</p>
 </ul></div>
 <div class="section level3">
 <h3 id="example-1">Example:<a class="anchor" aria-label="anchor" href="#example-1"></a></h3>
-<ul><li>Dark colors may imply higher importance</li>
-<li>Certain color schemes may exclude colorblind users</li>
+<ul><li>Darker/Very Light colors may imply higher value and importance</li>
+<li>Certain color schemes may exclude colorblind users (see next
+module)</li>
 </ul><figure><img src="badmap.jpg" title="A map showing bad colors being used to represent a data." alt="Bad USA Map" class="figure mx-auto d-block"><div class="figcaption">Bad USA Map</div>
-</figure><hr></div>
+</figure><p><strong>Best Practice:</strong> Establish clear contrast between
+foreground (data) and background (basemap). Use figure-ground
+techniques, such as subtle vignettes or lighter basemaps, so your data
+stands out.</p>
+<hr></div>
 </section><section><h2 class="section-heading" id="choose-the-right-medium">5. Choose the Right Medium<a class="anchor" aria-label="anchor" href="#choose-the-right-medium"></a></h2>
 <hr class="half-width"><p>Where your map is displayed affects design decisions.</p>
 <div class="section level3">
@@ -461,7 +472,10 @@ Which one would you prioritize if your goal is to show drought risk?</p>
 <ul><li>Will users zoom in?</li>
 <li>Will the map be printed in black and white?</li>
 <li>How large will it appear?</li>
-</ul><hr></div>
+</ul><p><strong>Tip for Web:</strong> Simplify basemaps and use halos on
+labels for readability over varied backgrounds. For print, test a
+physical proof.</p>
+<hr></div>
 </section><section><h2 class="section-heading" id="will-your-map-inform-decisions">6. Will Your Map Inform Decisions?<a class="anchor" aria-label="anchor" href="#will-your-map-inform-decisions"></a></h2>
 <hr class="half-width"><p>Some maps are purely exploratory, while others guide real-world
 actions.</p>
@@ -501,7 +515,13 @@ critical.</p>
 <ul><li>Add legends and labels</li>
 <li>Use plain language when possible</li>
 <li>Provide context (e.g., time period, data source)</li>
-</ul><hr></div>
+<li>Include essential map elements: <code>scale bar</code> (when
+distance matters), <code>north arrow</code> (if orientation isn’t
+standard), and <code>source</code> citation</li>
+</ul><p><strong>Pro Tip:</strong> Aim for “maximum information at minimum
+effort” — the viewer should grasp the main idea quickly without
+struggling.</p>
+<hr></div>
 </section><section><h2 class="section-heading" id="do-you-need-more-data">8. Do You Need More Data?<a class="anchor" aria-label="anchor" href="#do-you-need-more-data"></a></h2>
 <hr class="half-width"><p>Incomplete data can lead to misleading maps.</p>
 <div class="section level3">
@@ -534,7 +554,10 @@ indicate greater population density.</div>
 <h3 id="if-not">If not:<a class="anchor" aria-label="anchor" href="#if-not"></a></h3>
 <ul><li>Perform exploratory data analysis (EDA)</li>
 <li>Read metadata and documentation</li>
-<li>Consult domain experts if needed</li>
+<li>Consult someone if needed</li>
+<li>Research about the data more online!</li>
+<li>Advanced: Conduct sensitivity tests as in, do the results change
+under different assumptions?</li>
 </ul><hr></div>
 </section><section><h2 class="section-heading" id="cartography-checklist-summary">Cartography Checklist (Summary)<a class="anchor" aria-label="anchor" href="#cartography-checklist-summary"></a></h2>
 <hr class="half-width"><p>Before finalizing your map, review this checklist:</p>
@@ -557,8 +580,9 @@ appropriate</label></li>
 <li><label><input type="checkbox">I fully understand the data and
 topic</label></li>
 </ul><hr></section><section><h2 class="section-heading" id="final-thought">Final Thought<a class="anchor" aria-label="anchor" href="#final-thought"></a></h2>
-<hr class="half-width"><p>A good map is not just visually appealing — it is <strong>honest,
-clear, and purposeful</strong>.</p>
+<hr class="half-width"><p>A good map is not just visually appealing — it is honest, clear, and
+purposeful. It respects the data, serves the audience, and communicates
+effectively without distortion.</p>
 <div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -570,6 +594,8 @@ clear, and purposeful</strong>.</p>
 What did it do well? What could be improved?</p></li>
 <li><p>How might the same data be presented differently for another
 audience?</p></li>
+<li><p>Share an example of a map that misled you (or succeeded
+brilliantly) and why.</p></li>
 </ul></div>
 </div>
 </div>
