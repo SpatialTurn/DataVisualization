@@ -98,11 +98,26 @@ If a panel is missing, enable it via:
 
 We will start with a simple dataset (e.g., shapefile or GeoJSON). You can find a sample dataset [here](https://github.com/qgis/QGIS-Sample-Data/tree/master/qgis_sample_data)
 
+For our example, we will use `airport.shp` in the shapefiles folder in the link. Along with the .shp file make sure to download its supporting files to load in the .shp correctly. They are:
+
+- airports.cpg
+- airports.dbf
+- airports.prj
+- airports.shx
+
+### Step 0: Add Base Map
+
+1. In the Browser Panel click on `XYZ Tiles`. 
+2. You should see 2 options: Global Terrain and Open Street Map. 
+3. Right click on Open Street Map and Add Layer to Project.
+4. You should now see a world map on you Map Panel. 
+
 ### Step 1: Add a Vector Layer
 
-1. Go to: **Layer → Add Layer → Add Vector Layer**
+1. Go to: **Layer → Add Layer → Add Vector Layer**. Since we are working with point data here. 
 2. Browse to your dataset
-3. Click **Add**
+3. Click **Add** or double click on the file. 
+4. (If Applicable), drag the airports layer above the Open Street Map Layer since you want the points on top of the world map. 
 
 ---
 
@@ -117,6 +132,7 @@ We will start with a simple dataset (e.g., shapefile or GeoJSON). You can find a
 
 1. Right-click the layer
 2. Click **Open Attribute Table**
+3. You should see 76 entries for number of airports in Alaska.
 
 This table contains the data behind your map.
 
@@ -133,9 +149,7 @@ This table contains the data behind your map.
 
 ### Step 2: Choose a Style
 
-
-::contentReference[oaicite:1]{index=1}
-
+![You can change marker size, symbols, transparency etc. Make your map visually good such that it is clear to viewer!](symbology.png "Airport Map Alaska")
 
 ### Common styling options:
 
@@ -145,8 +159,9 @@ This table contains the data behind your map.
 
 ---
 
-### Step 3: Apply Colors
+### Step 3: Apply Colors (Applicable if working with a lot more data like elevation, climate data)
 
+- Try downloading the `elevp` file in csv folder
 - Choose a color ramp
 - Adjust classes (for graduated maps)
 - Click **Apply**
