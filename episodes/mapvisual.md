@@ -30,9 +30,15 @@ exercises: 30
 
 ## Why Thoughtful Map Design Matters
 
-Maps are powerful tools for communication. A well-designed map can reveal patterns, support decisions, and tell compelling stories. A poorly designed map can mislead, confuse, or hide important insights.
+Maps are powerful tools for communication. A well-designed map can reveal patterns, support decisions, and tell compelling stories. A poorly designed map can mislead, confuse, or hide important insights
 
-Before making a map, it’s essential to ask the right questions.
+Before making a map, it’s essential to ask the right questions. Good cartography follows core design principles: 
+
+- legibility (easy to read) 
+- visual contrast (important elements stand out) 
+- figure-ground (main features pop from the background) 
+- hierarchy (what's most important first) 
+- balance (pleasing layout without clutter)
 
 ---
 
@@ -79,7 +85,7 @@ Every map should answer a clear question.
 
 ## 3. Choose the Right Data Attributes
 
-Not all data belongs on your map.
+Not all data belongs on your map. Select variables that support your message and are spatially meaningful.
 
 ### Ask yourself:
 - Which variable is most important?
@@ -111,10 +117,12 @@ Maps are not neutral — design choices influence interpretation.
 - Is the map easy to interpret at a glance?
 
 ### Example:
-- Dark colors may imply higher importance
-- Certain color schemes may exclude colorblind users
+- Darker/Very Light colors may imply higher value and importance
+- Certain color schemes may exclude colorblind users (see next module)
 
 ![Bad USA Map](badmap.jpg "A map showing bad colors being used to represent a data.")
+
+**Best Practice:** Establish clear contrast between foreground (data) and background (basemap). Use figure-ground techniques, such as subtle vignettes or lighter basemaps, so your data stands out.
 
 ---
 
@@ -131,6 +139,8 @@ Where your map is displayed affects design decisions.
 - Will users zoom in?
 - Will the map be printed in black and white?
 - How large will it appear?
+
+**Tip for Web:** Simplify basemaps and use halos on labels for readability over varied backgrounds. For print, test a physical proof.
 
 ---
 
@@ -167,6 +177,9 @@ If your map influences decisions, accuracy and clarity are critical.
 - Add legends and labels
 - Use plain language when possible
 - Provide context (e.g., time period, data source)
+- Include essential map elements: `scale bar` (when distance matters), `north arrow` (if orientation isn't standard), and `source` citation
+
+**Pro Tip:** Aim for "maximum information at minimum effort" — the viewer should grasp the main idea quickly without struggling.
 
 ---
 
@@ -200,7 +213,9 @@ Before mapping, you should fully understand your dataset.
 ### If not:
 - Perform exploratory data analysis (EDA)
 - Read metadata and documentation
-- Consult domain experts if needed
+- Consult someone if needed
+- Research about the data more online!
+- Advanced: Conduct sensitivity tests as in, do the results change under different assumptions?
 
 ---
 
@@ -222,7 +237,7 @@ Before finalizing your map, review this checklist:
 
 ## Final Thought
 
-A good map is not just visually appealing — it is **honest, clear, and purposeful**.
+A good map is not just visually appealing — it is honest, clear, and purposeful. It respects the data, serves the audience, and communicates effectively without distortion.
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
@@ -230,5 +245,7 @@ A good map is not just visually appealing — it is **honest, clear, and purpose
   What did it do well? What could be improved?
 
 - How might the same data be presented differently for another audience?
+
+- Share an example of a map that misled you (or succeeded brilliantly) and why.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
