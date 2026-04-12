@@ -292,7 +292,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="accessibility.html">5. Importance of Accessibility</a>
+        <a href="accessibility.html">5. Accessibility in Map Design</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -2101,9 +2101,9 @@ Airports in Alaska.</div>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-accessibility"><p>Content from <a href="accessibility.html">Importance of Accessibility</a></p>
+</section></section><section id="aio-accessibility"><p>Content from <a href="accessibility.html">Accessibility in Map Design</a></p>
 <hr>
-<p>Last updated on 2026-03-27 |
+<p>Last updated on 2026-04-12 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/accessibility.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2116,6 +2116,15 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
+<ul>
+<li>Why is accessibility important in cartography?</li>
+<li>How do different types of color vision deficiency affect map
+reading?</li>
+<li>How can we design maps that are readable for colorblind users?</li>
+<li>What role do hue, saturation, and value play in accessible
+design?</li>
+<li>Which color palettes work best in QGIS for accessible maps?</li>
+</ul>
 </div>
 </div>
 </div>
@@ -2123,11 +2132,310 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
+<ul>
+<li>Understand why accessibility matters in map design</li>
+<li>Recognize major types of color vision deficiency (CVD)</li>
+<li>Apply color-safe cartographic principles</li>
+<li>Select accessible color palettes in QGIS</li>
+<li>Test maps for readability across audiences</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-</div></section>
+</div>
+<section><h2 class="section-heading" id="why-accessibility-matters-in-maps">Why Accessibility Matters in Maps<a class="anchor" aria-label="anchor" href="#why-accessibility-matters-in-maps"></a>
+</h2>
+<hr class="half-width">
+<p>Maps are communication tools.<br>
+If part of your audience cannot interpret your colors, your map fails to
+communicate effectively.</p>
+<p>Accessible maps: - Reach wider audiences - Improve readability for
+everyone - Reduce misunderstanding and bias - Support inclusive science
+communication</p>
+<div id="key-idea" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="key-idea" class="callout-inner">
+<h3 class="callout-title">Key Idea</h3>
+<div class="callout-content">
+<p>Accessibility is not optional — it is part of good cartographic
+design.</p>
+</div>
+</div>
+</div>
+<hr></section><section><h2 class="section-heading" id="understanding-color-vision-deficiency-colorblindness">Understanding Color Vision Deficiency (Colorblindness)<a class="anchor" aria-label="anchor" href="#understanding-color-vision-deficiency-colorblindness"></a>
+</h2>
+<hr class="half-width">
+<p>Color vision deficiency affects how some people distinguish
+colors.</p>
+<p>Approximately: - ~8% of men - ~0.5% of women</p>
+<p>experience some form of color vision deficiency.</p>
+<hr></section><section><h2 class="section-heading" id="common-types-of-colorblindness">Common Types of Colorblindness<a class="anchor" aria-label="anchor" href="#common-types-of-colorblindness"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="deuteranopia-green-blind">1. Deuteranopia (Green-Blind)<a class="anchor" aria-label="anchor" href="#deuteranopia-green-blind"></a>
+</h3>
+<p>Most common form.</p>
+<p>People may confuse: - Green ↔︎ Red - Green ↔︎ Brown</p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="protanopia-red-blind">2. Protanopia (Red-Blind)<a class="anchor" aria-label="anchor" href="#protanopia-red-blind"></a>
+</h3>
+<p>Reduced sensitivity to red light.</p>
+<p>People may confuse: - Red ↔︎ Green - Red appears darker</p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="tritanopia-blue-blind">3. Tritanopia (Blue-Blind)<a class="anchor" aria-label="anchor" href="#tritanopia-blue-blind"></a>
+</h3>
+<p>Rare.</p>
+<p>People may confuse: - Blue ↔︎ Green - Yellow ↔︎ Violet</p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="achromatopsia-monochromacy">4. Achromatopsia (Monochromacy)<a class="anchor" aria-label="anchor" href="#achromatopsia-monochromacy"></a>
+</h3>
+<p>Very rare.</p>
+<p>Little or no color perception.</p>
+<p>Maps may appear nearly grayscale.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Why might a red-green choropleth map fail for many users?</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="common-mapping-problems-for-colorblind-users">Common Mapping Problems for Colorblind Users<a class="anchor" aria-label="anchor" href="#common-mapping-problems-for-colorblind-users"></a>
+</h2>
+<hr class="half-width">
+<p>Poor design choices include: - Red vs green comparisons - Similar
+lightness values - Too many hues with low contrast - Relying only on
+color to encode meaning</p>
+<p>Example bad pairing: ❌ Red and green categories on same map</p>
+<hr></section><section><h2 class="section-heading" id="the-solution-use-hue-saturation-and-value-wisely">The Solution: Use Hue, Saturation, and Value Wisely<a class="anchor" aria-label="anchor" href="#the-solution-use-hue-saturation-and-value-wisely"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="hue">Hue<a class="anchor" aria-label="anchor" href="#hue"></a>
+</h3>
+<p>The color family (red, blue, green)</p>
+<p>Avoid: - Red-green combinations - Blue-purple confusion in
+tritanopia</p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="saturation">Saturation<a class="anchor" aria-label="anchor" href="#saturation"></a>
+</h3>
+<p>Intensity or purity of color</p>
+<p>Use: - Moderate saturation - Avoid oversaturated bright colors</p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="value-lightness">Value (Lightness)<a class="anchor" aria-label="anchor" href="#value-lightness"></a>
+</h3>
+<p>Most important for accessibility.</p>
+<p>If colors differ in brightness, they remain distinguishable even if
+hue is unclear.</p>
+<div id="best-practice" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="best-practice" class="callout-inner">
+<h3 class="callout-title">Best Practice</h3>
+<div class="callout-content">
+<p>When in doubt, vary lightness more than hue.</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="designing-accessible-maps">Designing Accessible Maps<a class="anchor" aria-label="anchor" href="#designing-accessible-maps"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="use-more-than-color">Use More Than Color<a class="anchor" aria-label="anchor" href="#use-more-than-color"></a>
+</h3>
+<p>Combine color with: - Patterns - Labels - Symbols - Line styles</p>
+<p>Example: Instead of only red vs green, use: - Blue circles - Orange
+squares</p>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="recommended-colorblind-safe-palettes">Recommended Colorblind-Safe Palettes<a class="anchor" aria-label="anchor" href="#recommended-colorblind-safe-palettes"></a>
+</h2>
+<hr class="half-width">
+<p>These palettes work well across most users.</p>
+<div class="section level3">
+<h3 id="sequential-data">Sequential Data:<a class="anchor" aria-label="anchor" href="#sequential-data"></a>
+</h3>
+<p>Best choices: - Blues - Viridis - Cividis - YlGnBu</p>
+</div>
+<div class="section level3">
+<h3 id="diverging-data">Diverging Data:<a class="anchor" aria-label="anchor" href="#diverging-data"></a>
+</h3>
+<p>Best choices: - Blue–Orange - Purple–Green (carefully tested)</p>
+</div>
+<div class="section level3">
+<h3 id="categorical-data">Categorical Data:<a class="anchor" aria-label="anchor" href="#categorical-data"></a>
+</h3>
+<p>Best choices: - ColorBrewer Set2 - Dark2 - Tableau palettes</p>
+<div id="avoid-rainbow-palettes" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="avoid-rainbow-palettes" class="callout-inner">
+<h3 class="callout-title">Avoid Rainbow Palettes</h3>
+<div class="callout-content">
+<p>Rainbow color ramps create misleading emphasis and poor
+accessibility.</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="best-qgis-palettes-for-accessibility">Best QGIS Palettes for Accessibility<a class="anchor" aria-label="anchor" href="#best-qgis-palettes-for-accessibility"></a>
+</h2>
+<hr class="half-width">
+<p>In QGIS, use built-in ramps such as:</p>
+<div class="section level3">
+<h3 id="excellent-choices">Excellent Choices:<a class="anchor" aria-label="anchor" href="#excellent-choices"></a>
+</h3>
+<ul>
+<li>Viridis</li>
+<li>Cividis</li>
+<li>Plasma</li>
+<li>Inferno</li>
+<li>Blues</li>
+<li>ColorBrewer Safe</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="avoid">Avoid:<a class="anchor" aria-label="anchor" href="#avoid"></a>
+</h3>
+<ul>
+<li>Rainbow</li>
+<li>Red-Green diverging ramps</li>
+<li>Neon saturated ramps</li>
+</ul>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="how-to-apply-accessible-palettes-in-qgis">How to Apply Accessible Palettes in QGIS<a class="anchor" aria-label="anchor" href="#how-to-apply-accessible-palettes-in-qgis"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="step-1-open-symbology">Step 1: Open Symbology<a class="anchor" aria-label="anchor" href="#step-1-open-symbology"></a>
+</h3>
+<p>Right-click layer → <strong>Properties → Symbology</strong></p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="step-2-choose-color-ramp">Step 2: Choose Color Ramp<a class="anchor" aria-label="anchor" href="#step-2-choose-color-ramp"></a>
+</h3>
+<p>Select: - Viridis - Cividis - Blues</p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="step-3-preview-contrast">Step 3: Preview Contrast<a class="anchor" aria-label="anchor" href="#step-3-preview-contrast"></a>
+</h3>
+<p>Check: - Are adjacent classes clearly distinguishable? - Do values
+differ in brightness?</p>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="testing-your-map-for-accessibility">Testing Your Map for Accessibility<a class="anchor" aria-label="anchor" href="#testing-your-map-for-accessibility"></a>
+</h2>
+<hr class="half-width">
+<p>Always test your design.</p>
+<div class="section level3">
+<h3 id="tools">Tools:<a class="anchor" aria-label="anchor" href="#tools"></a>
+</h3>
+<ul>
+<li>QGIS Preview Modes</li>
+<li>Color Oracle</li>
+<li>Coblis Color Blindness Simulator</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="ask">Ask:<a class="anchor" aria-label="anchor" href="#ask"></a>
+</h3>
+<p>Can someone distinguish categories without relying only on hue?</p>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="accessibility-beyond-colorblindness">Accessibility Beyond Colorblindness<a class="anchor" aria-label="anchor" href="#accessibility-beyond-colorblindness"></a>
+</h2>
+<hr class="half-width">
+<p>Remember: Accessibility also includes: - Readable font sizes - Clear
+legends - Sufficient contrast - Screen-reader compatible web maps</p>
+<hr></section><section><h2 class="section-heading" id="example-good-vs-bad-design">Example: Good vs Bad Design<a class="anchor" aria-label="anchor" href="#example-good-vs-bad-design"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="bad">Bad:<a class="anchor" aria-label="anchor" href="#bad"></a>
+</h3>
+<p>❌ Red-green choropleth with equal brightness</p>
+</div>
+<div class="section level3">
+<h3 id="good">Good:<a class="anchor" aria-label="anchor" href="#good"></a>
+</h3>
+<p>✅ Blue-orange palette with strong value contrast</p>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="accessibility-checklist-for-maps">Accessibility Checklist for Maps<a class="anchor" aria-label="anchor" href="#accessibility-checklist-for-maps"></a>
+</h2>
+<hr class="half-width">
+<p>Before publishing:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Avoid red-green
+contrasts</label></li>
+<li><label><input type="checkbox">Use colorblind-safe
+palettes</label></li>
+<li><label><input type="checkbox">Ensure brightness contrast
+exists</label></li>
+<li><label><input type="checkbox">Add labels or symbols beyond
+color</label></li>
+<li><label><input type="checkbox">Test using simulation
+tools</label></li>
+<li><label><input type="checkbox">Keep legends simple and
+readable</label></li>
+</ul>
+<hr></section><section><h2 class="section-heading" id="final-takeaways">Final Takeaways<a class="anchor" aria-label="anchor" href="#final-takeaways"></a>
+</h2>
+<hr class="half-width">
+<p>Accessible maps are: - Clearer - More inclusive - More
+professional</p>
+<p>Good cartography means designing for all users.</p>
+<div id="discussion2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Have you seen maps that were difficult to read because of
+color?</li>
+<li>How can accessibility improve scientific communication?</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section>
 </div>
     </main>
 </div>
@@ -2176,9 +2484,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/aio.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/aio.html",
-  "dateCreated": "2026-03-27",
-  "dateModified": "2026-04-07",
-  "datePublished": "2026-04-07"
+  "dateCreated": "2026-04-12",
+  "dateModified": "2026-04-12",
+  "datePublished": "2026-04-12"
 }
 
   </script><script>
