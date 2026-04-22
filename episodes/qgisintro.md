@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with QGIS: Installation and Your First Map"
+title: "Getting Started with QGIS: Your First Map"
 teaching: 60
 exercises: 45
 ---
