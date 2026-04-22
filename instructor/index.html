@@ -227,7 +227,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="qgisintro.html">4. Getting Started with QGIS: Installation and Your First Map</a>
+        <a href="qgisintro.html">4. Getting Started with QGIS: Your First Map</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -352,8 +352,8 @@ data be classified for choropleth maps?
 <span class="visually-hidden">Duration: </span>04h 15m
 </td>
 <td>
- 4. <a href="qgisintro.html">Getting Started with QGIS: Installation and
-Your First Map</a>
+ 4. <a href="qgisintro.html">Getting Started with QGIS: Your First
+Map</a>
 </td>
 <td>
 What is QGIS and why is it useful?<br>How do I install QGIS on my
@@ -387,106 +387,108 @@ any links that you are not going to use.
  --></tbody></table><p>
       The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
       </p>
-      </section><section id="setup"><section><h2 class="section-heading" id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a></h2>
-<hr class="half-width"><p>To participate in the <strong>Data Visualization</strong> module, you
-will need:</p>
+      </section><section id="setup"><div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul><li>What is QGIS and why is it useful?</li>
+<li>How do I install QGIS on my system?</li>
+<li>How do I load spatial data into QGIS?</li>
+<li>How can I style and visualize data on a map?</li>
+<li>How do I export a finished map?</li>
+</ul></div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul><li>Install QGIS successfully</li>
+<li>Understand the QGIS interface</li>
+<li>Load and explore spatial datasets</li>
+<li>Create and style a simple map</li>
+<li>Export a publication-ready map</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="what-is-qgis">What is QGIS?<a class="anchor" aria-label="anchor" href="#what-is-qgis"></a></h2>
+<hr class="half-width"><p><strong>QGIS</strong> is a free, open-source Geographic Information
+System (GIS) used to: - Visualize spatial data - Analyze geographic
+patterns - Create professional-quality maps</p>
+<div id="why-qgis" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="why-qgis" class="callout-inner">
+<h3 class="callout-title">Why QGIS?</h3>
+<div class="callout-content">
+<p>QGIS is widely used in academia, industry, and government — and it’s
+completely free.</p>
+</div>
+</div>
+</div>
+<hr></section><section><h2 class="section-heading" id="installing-qgis">Installing QGIS<a class="anchor" aria-label="anchor" href="#installing-qgis"></a></h2>
+<hr class="half-width"><div class="section level3">
+<h3 id="step-1-download-qgis">Step 1: Download QGIS<a class="anchor" aria-label="anchor" href="#step-1-download-qgis"></a></h3>
+<ol style="list-style-type: decimal"><li><p>Go to the official QGIS website:<br>
+👉 <a href="https://qgis.org" class="external-link uri">https://qgis.org</a></p></li>
+<li><p>Click <strong>Download Now</strong></p></li>
+<li>
+<p>Choose the appropriate version:</p>
 <ul><li>
-<strong>Python 3.10 or newer</strong> (3.11–3.12 recommended in
-local setups)</li>
-<li>The following Python packages:
-<ul><li>pandas (data handling)</li>
-<li>matplotlib (core plotting)</li>
-<li>seaborn (statistical visualizations)</li>
-<li>(optional but recommended) jupyterlab or notebook (interactive
-work)</li>
-<li>(optional) plotly (interactive charts in later episodes)</li>
+<strong>Windows</strong> → Use the <em>Standalone
+Installer</em>
+</li>
+<li>
+<strong>Mac</strong> → Download the macOS package</li>
+<li>
+<strong>Linux</strong> → Install via package manager (apt, yum,
+etc.)</li>
 </ul></li>
-<li>A code editor or notebook interface</li>
-<li>Sample datasets (provided as a zip file)</li>
-</ul><p>We offer <strong>two main setup paths</strong>:</p>
-<ol style="list-style-type: decimal"><li>
-<strong>Google Colab</strong> (recommended for beginners / no
-installation needed)</li>
-<li>
-<strong>Local installation</strong> with
-<code>Anaconda Navigator</code> (great for offline work and full
-control)</li>
-</ol></section><section><h2 class="section-heading" id="option-1-google-colab-zero-installation-recommended-for-most-learners">Option 1: Google Colab (Zero Installation – Recommended for Most
-Learners)<a class="anchor" aria-label="anchor" href="#option-1-google-colab-zero-installation-recommended-for-most-learners"></a></h2>
-<hr class="half-width"><p>Google Colab is a free, cloud-based Jupyter notebook environment
-hosted by Google. It runs entirely in your browser, requires only a
-Google account, and comes with pandas, matplotlib, seaborn, and many
-other data science libraries <strong>pre-installed</strong>.</p>
+</ol><hr></div>
 <div class="section level3">
-<h3 id="steps">Steps<a class="anchor" aria-label="anchor" href="#steps"></a></h3>
-<ol style="list-style-type: decimal"><li><p>Go to → <a href="https://colab.research.google.com" class="external-link uri">https://colab.research.google.com</a></p></li>
-<li><p>Sign in with your Google account (or create one if
-needed).</p></li>
-<li><p>Click <strong>New notebook</strong> (or File → New
-notebook).</p></li>
-<li><p>(Optional) Rename it: File → Rename (e.g., “Data Viz Workshop –
-Aniket”).</p></li>
+<h3 id="step-2-install-qgis">Step 2: Install QGIS<a class="anchor" aria-label="anchor" href="#step-2-install-qgis"></a></h3>
+<ul><li>Run the installer</li>
+<li>Keep default settings (recommended for beginners)</li>
+<li>Wait for installation to complete</li>
+</ul><hr></div>
+<div class="section level3">
+<h3 id="step-3-launch-qgis">Step 3: Launch QGIS<a class="anchor" aria-label="anchor" href="#step-3-launch-qgis"></a></h3>
+<ul><li>Open QGIS Desktop</li>
+<li>You should see the main interface</li>
+</ul><hr></div>
+</section><section><h2 class="section-heading" id="understanding-the-qgis-interface">Understanding the QGIS Interface<a class="anchor" aria-label="anchor" href="#understanding-the-qgis-interface"></a></h2>
+<hr class="half-width"><figure><img src="../qgisinterface.png" title="Map Elements" alt="QGIS Interface Features." class="figure mx-auto d-block"><div class="figcaption">QGIS Interface Features.</div>
+</figure><div class="section level3">
+<h3 id="key-components">Key Components:<a class="anchor" aria-label="anchor" href="#key-components"></a></h3>
+<ul><li>
+<strong>Map Canvas</strong> → where your map is displayed<br></li>
 <li>
-<p>Test the libraries right away by running this in the first cell
-(Shift+Enter to execute):</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="im">import</span> plotly.express <span class="im">as</span> px   <span class="co"># optional – usually pre-installed too</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="bu">print</span>(<span class="st">"pandas version:"</span>, pd.__version__)</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="bu">print</span>(<span class="st">"matplotlib version:"</span>, plt.matplotlib.__version__)</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a><span class="bu">print</span>(<span class="st">"seaborn version:"</span>, sns.__version__)</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a><span class="bu">print</span>(<span class="st">"plotly version:"</span>, px.__version__ <span class="cf">if</span> <span class="st">'px'</span> <span class="kw">in</span> <span class="bu">globals</span>() <span class="cf">else</span> <span class="st">"not imported"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1" aria-label="code-block-1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1" aria-label="code-block-1-11"></a><span class="co"># Quick test plot (should show inline)</span></span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1" aria-label="code-block-1-12"></a>tips <span class="op">=</span> sns.load_dataset(<span class="st">"tips"</span>)  <span class="co"># built-in Seaborn dataset</span></span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1" aria-label="code-block-1-13"></a>sns.histplot(data<span class="op">=</span>tips, x<span class="op">=</span><span class="st">"total_bill"</span>, hue<span class="op">=</span><span class="st">"time"</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1" aria-label="code-block-1-14"></a>plt.title(<span class="st">"Test: Restaurant Tips Distribution"</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1" aria-label="code-block-1-15"></a>plt.show()</span></code></pre>
+<strong>Layers Panel</strong> → shows all loaded datasets<br></li>
+<li>
+<strong>Browser Panel</strong> → access files on your system<br></li>
+<li>
+<strong>Toolbar</strong> → tools for navigation and editing</li>
+</ul><div id="tip" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-</li>
-<li><p>Installing extra packages (rarely needed, but if something is
-missing or outdated):Python</p></li>
-</ol><div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="op">!</span>pip install <span class="op">--</span>upgrade seaborn plotly</span></code></pre>
+<span class="callout-header">Callout</span>
+<div id="tip" class="callout-inner">
+<h3 class="callout-title">Tip</h3>
+<div class="callout-content">
+<p>If a panel is missing, enable it via:<br><strong>View → Panels</strong></p>
 </div>
-<p>(The <code>!</code> runs shell commands in Colab/Jupyter
-Notebook.)</p>
 </div>
-</section><section><h2 class="section-heading" id="advantages-of-colab-for-this-workshop">Advantages of Colab for this workshop<a class="anchor" aria-label="anchor" href="#advantages-of-colab-for-this-workshop"></a></h2>
-<hr class="half-width"><ul><li>No software installation</li>
-<li>Free GPU/TPU if needed later</li>
-<li>Easy sharing (File → Share)</li>
-<li>Autosaves to Google Drive</li>
-<li>Perfect for following along with instructor demos</li>
-</ul><p><strong>Tip</strong>: Upload your own data files via the left sidebar
-(Files tab → Upload) or mount Google Drive: Python</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a>drive.mount(<span class="st">'/content/drive'</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="co"># Then read files like pd.read_csv('/content/drive/MyDrive/penguins.csv')</span></span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="option-2-local-installation-anaconda-navigator-for-offline-advanced-use">Option 2: Local Installation (Anaconda Navigator – For Offline /
-Advanced Use)<a class="anchor" aria-label="anchor" href="#option-2-local-installation-anaconda-navigator-for-offline-advanced-use"></a></h2>
-<hr class="half-width"><p>Use this if you prefer working without internet or need a persistent
-environment.</p>
-<ol style="list-style-type: decimal"><li>Download and install Anaconda Navigator:</li>
-</ol><ul><li><a href="https://www.anaconda.com/products/navigator" class="external-link uri">https://www.anaconda.com/products/navigator</a></li>
-<li>Choose your OS installer (Python 3.x version) → follow defaults</li>
-</ul><ol start="2" style="list-style-type: decimal"><li>You should find multiple apps after installation.</li>
-</ol><ul><li>Launch <code>Jupyter Notebook</code>
-</li>
-<li>If you do not find a package simply add <code>!pip</code> followed
-by the name of the package in code cell to install it locally.</li>
-</ul></section><section><h2 class="section-heading" id="troubleshooting">Troubleshooting<a class="anchor" aria-label="anchor" href="#troubleshooting"></a></h2>
+<hr></div>
+</section><section><h2 class="section-heading" id="troubleshooting">Troubleshooting<a class="anchor" aria-label="anchor" href="#troubleshooting"></a></h2>
 <hr class="half-width"><ul><li>
 <strong>Colab:</strong> Plots not showing? Add %matplotlib inline at
 the top (usually automatic).</li>
@@ -496,8 +498,8 @@ cell in jupyter notebook and <code>!pip</code> install package.</li>
 <li>
 <strong>Need help?</strong> Raise hand during workshop or check
 Carpentries Python setup guide.</li>
-</ul><p>You’re all set! Proceed to Introduction to Data Visualization or
-Creating Your First Plots.</p>
+</ul><p>You’re all set! Proceed to Modules below in Data Visualization and
+Create your first map!</p>
 <p>Happy visualizing!</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
@@ -553,9 +555,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/instructor/index.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/index.html",
-  "dateCreated": "2026-04-12",
-  "dateModified": "2026-04-21",
-  "datePublished": "2026-04-21"
+  "dateCreated": "2026-04-22",
+  "dateModified": "2026-04-22",
+  "datePublished": "2026-04-22"
 }
 
   </script><script>
