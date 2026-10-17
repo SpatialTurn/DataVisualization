@@ -281,19 +281,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="qgisintro.html">4. Getting Started with QGIS: Your First Map</a>
-    </div>
-<!--/div.accordion-header-->
-
-  </div>
-<!--/div.accordion-item-->
-</div>
-<!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush6">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading6">
-        <a href="accessibility.html">5. Accessibility in Map Design</a>
+        <a href="accessibility.html">4. Accessibility in Map Design</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -383,21 +371,23 @@
 <ul>
 <li>This module mixes <strong>concepts</strong> (Cartography Checklists,
 Fundamentals of Map Design), <strong>Python</strong> (the Introduction
-notebooks) and <strong>QGIS</strong> (Getting Started with QGIS,
-Accessibility). Make sure learners have both a Google account and QGIS
-installed before the session; QGIS installation is the most common
-delay.</li>
+notebooks) and <strong>QGIS</strong> (Accessibility). The QGIS basics
+are taught in the Foundations module’s Getting Started with QGIS episode
+(moved there in October 2026). Make sure learners have both a Google
+account and QGIS installed before the session; QGIS installation is the
+most common delay.</li>
 <li>Every figure in the concept episodes was generated from open data
 (U.S. Census Bureau, Bureau of Labor Statistics, Natural Earth,
 Gapminder) with code, so the examples are reproducible and properly
 credited.</li>
 <li>All data is read from the web. The notebooks use Plotly’s built-in
-datasets; the QGIS episode loads GeoJSON files from this repository’s
-<code>data/</code> folder by URL.</li>
+datasets; the Accessibility episode’s QGIS challenge loads the Indiana
+counties file from the Foundations module by URL.</li>
 <li>Suggested timing for a half day: Introduction (30 min plus notebook
-1a), Checklists (30 min), Map Design (60 min), QGIS (75 min),
-Accessibility (30 min). Notebooks 1b and 1c work well as take-home
-material.</li>
+1a), Checklists (30 min), Map Design (60 min), Accessibility (30 min).
+Learners new to QGIS should first do the Foundations module’s Getting
+Started with QGIS episode (about 75 min). Notebooks 1b and 1c work well
+as take-home material.</li>
 </ul></section><section><h2 class="section-heading" id="episode-by-episode">Episode by episode<a class="anchor" aria-label="anchor" href="#episode-by-episode"></a>
 </h2>
 <hr class="half-width">
@@ -434,22 +424,6 @@ strongly skewed. Point out how equal interval puts almost everything in
 one class, and show the histogram figure to explain why.</li>
 <li>Use The True Size Of website live; dragging Russia or Greenland to
 the equator is memorable.</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="getting-started-with-qgis">Getting Started with QGIS<a class="anchor" aria-label="anchor" href="#getting-started-with-qgis"></a>
-</h3>
-<ul>
-<li>Loading from a web address (Layer &gt; Add Layer &gt; Add Vector
-Layer &gt; Protocol: HTTP(S)) avoids file downloads and path problems.
-If a network blocks it, the same GeoJSON files can be downloaded from
-the repository’s <code>data/</code> folder and loaded as files.</li>
-<li>In QGIS, the OpenStreetMap basemap works normally. (In Colab it does
-not, which is why the notebooks use an Esri basemap.)</li>
-<li>Learners often press <strong>OK</strong> instead of
-<strong>Apply</strong> while comparing classification modes; encourage
-<strong>Apply</strong> so the dialog stays open.</li>
-<li>Remind learners to rename layers before making a legend.</li>
 </ul>
 </div>
 <div class="section level3">
@@ -522,7 +496,6 @@ Add reference-style links below as needed.
 --></section><section id="aggregate-instructor-notes"><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction to Data Visualization</a></h2>
 <hr class="half-width"></section><section id="mapvisual"><h2 class="section-heading"><a href="mapvisual.html">Cartography Checklists</a></h2>
 <hr class="half-width"></section><section id="mapbasics"><h2 class="section-heading"><a href="mapbasics.html">Fundamentals of Map Design</a></h2>
-<hr class="half-width"></section><section id="qgisintro"><h2 class="section-heading"><a href="qgisintro.html">Getting Started with QGIS: Your First Map</a></h2>
 <hr class="half-width"></section><section id="accessibility"><h2 class="section-heading"><a href="accessibility.html">Accessibility in Map Design</a></h2>
 <hr class="half-width"></section></section>
 </div>

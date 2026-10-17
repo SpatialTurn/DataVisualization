@@ -236,16 +236,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="qgisintro.html">4. Getting Started with QGIS: Your First Map</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush6">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading6">
-        <a href="accessibility.html">5. Accessibility in Map Design</a>
+        <a href="accessibility.html">4. Accessibility in Map Design</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -335,10 +326,6 @@ data, medium</td>
 <td>Map elements, color schemes, projections, thematic map types,
 normalization and classification</td>
 <td>Concepts, Python and QGIS equivalents</td>
-</tr><tr><td>Getting Started with QGIS</td>
-<td>Loading data from the web, styling layers, building a choropleth map
-and exporting a layout</td>
-<td>QGIS</td>
 </tr><tr><td>Accessibility in Map Design</td>
 <td>Designing maps for people with color vision deficiency, testing
 palettes and writing alt text</td>
@@ -357,6 +344,8 @@ read on their own.</p>
 <ul><li>A Google account, to open the notebooks in Google Colab</li>
 <li>QGIS installed on your computer (see the Setup instructions
 below)</li>
+<li>New to QGIS? Work through the Foundations module’s <a href="https://spatialturn.github.io/Foundations/qgisintro.html" class="external-link">Getting
+Started with QGIS</a> episode first</li>
 <li>For the notebooks: basic Python, such as running cells and working
 with a <code>pandas</code> DataFrame</li>
 <li>No prior GIS or design experience is needed</li>
@@ -364,9 +353,9 @@ with a <code>pandas</code> DataFrame</li>
 </div>
 </div>
 <p>All data used in this module is read directly from the web: the
-notebooks use datasets built into Plotly, and the QGIS episode loads
-small files hosted in this lesson’s repository. Learners never need to
-download data by hand.</p>
+notebooks use datasets built into Plotly, and the QGIS challenge in the
+Accessibility episode loads a small file from the Foundations module.
+Learners never need to download data by hand.</p>
 <p>This module is part of <a href="https://spatialturn.github.io/" class="external-link">Enabling the Geospatial Turn in
 the Social Sciences</a>, a set of training modules developed at Purdue
 University with support from the National Science Foundation.</p>
@@ -420,20 +409,7 @@ classification method change what a map shows?
 <span class="visually-hidden">Duration: </span>04h 15m
 </td>
 <td>
- 4. <a href="qgisintro.html">Getting Started with QGIS: Your First
-Map</a>
-</td>
-<td>
-How do I load spatial data into QGIS, including directly from the
-web?<br>How do I explore a layer’s attributes?<br>How can I style
-point data by category and polygon data by value?<br>How do I create
-and export a finished map layout?
-</td>
-</tr><tr><td>
-<span class="visually-hidden">Duration: </span>06h 00m
-</td>
-<td>
- 5. <a href="accessibility.html">Accessibility in Map Design</a>
+ 4. <a href="accessibility.html">Accessibility in Map Design</a>
 </td>
 <td>
 Why is accessibility important in cartography?<br>How do different
@@ -444,7 +420,7 @@ accessible design?<br>How can I choose and test accessible palettes in
 QGIS and Python?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>07h 30m
+<span class="visually-hidden">Duration: </span>05h 45m
 </td>
 <td>
 Finish
@@ -463,8 +439,8 @@ Add reference-style links below as needed.
 Introduction episode. It runs in your web browser, so there is nothing
 to install.</li>
 <li>
-<strong>QGIS</strong> for the Getting Started with QGIS and
-Accessibility episodes. It is a desktop program you install once.</li>
+<strong>QGIS</strong> for the Accessibility episode. It is a desktop
+program you install once.</li>
 </ul><section><h2 class="section-heading" id="what-you-need">What you need<a class="anchor" aria-label="anchor" href="#what-you-need"></a></h2>
 <hr class="half-width"><ul><li>A Google account (for Colab)</li>
 <li>A computer where you can install software (for QGIS)</li>
@@ -483,70 +459,11 @@ Enter</strong>.</li>
 </ol><p>The notebooks use datasets built into the Plotly library, so you
 never need to download data.</p>
 </section><section><h2 class="section-heading" id="part-2-install-qgis">Part 2: Install QGIS<a class="anchor" aria-label="anchor" href="#part-2-install-qgis"></a></h2>
-<hr class="half-width"><p><strong>QGIS</strong> is a free, open source Geographic Information
-System (GIS) used to visualize spatial data, analyze geographic patterns
-and design maps. It is widely used in universities, government and
-industry.</p>
-<div class="section level3">
-<h3 id="step-1-download">Step 1: Download<a class="anchor" aria-label="anchor" href="#step-1-download"></a></h3>
-<ol style="list-style-type: decimal"><li>Go to <a href="https://qgis.org" class="external-link uri">https://qgis.org</a>
-and click <strong>Download</strong>.</li>
-<li>Choose the <strong>Long Term Release (LTR)</strong> version. It is
-the most stable, and the lessons were written for it.
-<ul><li>
-<strong>Windows:</strong> the standalone installer
-(<code>.msi</code>)</li>
-<li>
-<strong>macOS:</strong> the macOS installer (<code>.dmg</code>). The
-first time you open QGIS, you may need to right-click the app and choose
-<strong>Open</strong> to get past the security warning.</li>
-<li>
-<strong>Linux:</strong> follow the instructions for your
-distribution on the QGIS download page</li>
-</ul></li>
-</ol></div>
-<div class="section level3">
-<h3 id="step-2-install">Step 2: Install<a class="anchor" aria-label="anchor" href="#step-2-install"></a></h3>
-<p>Run the installer and keep the default settings.</p>
-</div>
-<div class="section level3">
-<h3 id="step-3-launch">Step 3: Launch<a class="anchor" aria-label="anchor" href="#step-3-launch"></a></h3>
-<p>Open <strong>QGIS Desktop</strong> (not “QGIS with GRASS” or other
-variants, if several are listed). You should see the main window.</p>
-</div>
-</section><section><h2 class="section-heading" id="the-qgis-interface">The QGIS interface<a class="anchor" aria-label="anchor" href="#the-qgis-interface"></a></h2>
-<hr class="half-width"><figure><img src="../qgisinterface.png" alt="Screenshot of an empty QGIS project window with yellow labels marking its main parts: the menu bar and toolbars across the top, the Browser panel at upper left listing folders and data sources, the Layers panel at lower left, the large map view on the right, and the status bar along the bottom showing coordinates, scale, magnifier, rotation and the project coordinate system." class="figure mx-auto d-block"><div class="figcaption">The main parts of the QGIS window</div>
-</figure><table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Part</th>
-<th>What it does</th>
-</tr></thead><tbody><tr><td><strong>Menu bar</strong></td>
-<td>All commands, organized by topic (Project, Layer, Vector, Raster and
-so on)</td>
-</tr><tr><td><strong>Toolbars</strong></td>
-<td>Shortcuts for common tools such as pan, zoom and identify</td>
-</tr><tr><td><strong>Browser panel</strong></td>
-<td>Your files, databases and web sources, including <strong>XYZ
-Tiles</strong> basemaps</td>
-</tr><tr><td><strong>Layers panel</strong></td>
-<td>The layers in your project. Layers at the top are drawn on top.</td>
-</tr><tr><td>
-<strong>Map view</strong> (canvas)</td>
-<td>Where the map is displayed</td>
-</tr><tr><td><strong>Status bar</strong></td>
-<td>Coordinates under the cursor, map scale and the project’s coordinate
-system (EPSG code)</td>
-</tr></tbody></table><div id="tip" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="tip" class="callout-inner">
-<h3 class="callout-title">Tip</h3>
-<div class="callout-content">
-<p>If a panel is missing, turn it back on with <strong>View &gt;
-Panels</strong>.</p>
-</div>
-</div>
-</div>
+<hr class="half-width"><p>Follow the installation steps on the <a href="https://spatialturn.github.io/Foundations/learners/setup.html" class="external-link">central
+Setup page</a> of the Foundations module, which also shows the parts of
+the QGIS window. If QGIS is new to you, work through the Foundations
+module’s <a href="https://spatialturn.github.io/Foundations/qgisintro.html" class="external-link">Getting
+Started with QGIS</a> episode before the Accessibility episode.</p>
 </section><section><h2 class="section-heading" id="troubleshooting">Troubleshooting<a class="anchor" aria-label="anchor" href="#troubleshooting"></a></h2>
 <hr class="half-width"><table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Problem</th>
 <th>Fix</th>
