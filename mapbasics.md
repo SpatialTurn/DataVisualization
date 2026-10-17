@@ -451,7 +451,7 @@ Each concept in this episode has a direct tool in both platforms used in this cu
 | Normalization | `gdf["rate"] = gdf["count"] / gdf["pop"]` | Open the attribute table > **Field Calculator** > new field `"count" / "pop"` |
 | Projection | `gdf.to_crs(epsg=5070)` | Project > Properties > **CRS** |
 | Interactive map | `gdf.explore()` | The **qgis2web** plugin |
-| Layout with map elements | Matplotlib annotations | **Print Layout** (see the QGIS episode) |
+| Layout with map elements | Matplotlib annotations | **Print Layout** (see [Getting Started with QGIS](https://spatialturn.github.io/Foundations/qgisintro.html) in the Foundations module) |
 
 ---
 

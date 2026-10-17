@@ -323,7 +323,8 @@ Before publishing:
 
 ## Challenge 2: Fix a palette in QGIS
 
-Load the Indiana counties layer from the QGIS episode, style `unemp_2016` with **Graduated** symbology
+Load the Indiana counties layer (`https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/indiana_counties.geojson`, as in the Foundations module's
+[Getting Started with QGIS](https://spatialturn.github.io/Foundations/qgisintro.html) episode), style `unemp_2016` with **Graduated** symbology
 and the **RdYlGn** color ramp. Switch to **View > Preview Mode > Simulate Color Blindness
 (Deuteranope)**. Then change the ramp to an accessible one and preview again.
 
