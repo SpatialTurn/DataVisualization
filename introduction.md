@@ -5,182 +5,225 @@ exercises: 30
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
-- What exactly is data visualization and how does it differ from simple charts?
-- Why do humans understand visualized data much faster than raw numbers or tables?
-- What are the real advantages and hidden pitfalls of using visuals in data analysis?
-- How does visualization help (or complicate) working with big data?
-- Which tools are most suitable for beginners, intermediate users, and advanced programmers?
-- What makes a visualization "good" versus "misleading"?
+
+- What is data visualization, and why does it matter for research?
+- What can a chart or map show that a table cannot?
+- How can a visualization mislead, even when the data are correct?
+- How do exploratory and explanatory visualizations differ?
+- Which tools are a good fit for beginners, and which come later?
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
-- Define data visualization and explain its core purpose
-- List at least five advantages and three disadvantages of data visualization
-- Describe how visualization addresses challenges posed by big data
-- Identify and differentiate between exploratory and explanatory visualizations with real-world examples
-- Compare popular open-source and commercial tools for creating visualizations
-- Recognize key principles of effective visualization design
-- Understand ethical considerations and accessibility best practices
+
+- Define data visualization and explain its purpose in research
+- Describe the main advantages and risks of visualizing data
+- Tell exploratory visualizations apart from explanatory ones
+- Recognize common ways charts and maps mislead
+- Compare tools for making charts and maps, from spreadsheets to Python and QGIS
+- Apply a short set of design principles to your own figures
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## What is data visualization?
+
+**Data visualization** is the graphical representation of data. Instead of reading rows and
+columns of numbers, the reader sees positions, lengths, areas, colors and shapes, and uses them to
+compare values, spot patterns and notice anything unusual.
+
+A good visualization answers a question. "How did unemployment change after 2008?", "Which counties
+have the most people over 65?" or "Is income related to commute time?" are all questions a chart or a
+map can answer faster and more memorably than a table.
+
+Maps are a special kind of visualization: they use **location** as one of the visual channels. Most of
+this module is about maps, but the same principles apply to every chart, so we start there.
+
+## Why visualize?
+
+1. **Patterns are easier to see than to read.** Our visual system is very good at comparing
+   positions and lengths, noticing clusters, and picking out a value that does not fit. A trend
+   across 50 monthly figures is obvious in a line chart and easy to miss in a table.
+2. **Visuals reveal what summary statistics hide.** Very different datasets can share the same
+   mean, variance and correlation and still look nothing alike when plotted. (Anscombe's quartet is
+   the classic example; search for it if you have not seen it.)
+3. **They catch data problems.** Impossible values, missing records, duplicated rows and wrong units
+   often show up immediately in a quick plot.
+4. **They communicate.** A clear figure lets colleagues, community partners and policymakers grasp a
+   result without reading your code or your tables.
+
+### Exploratory and explanatory visualization
+
+- **Exploratory** figures are for *you*. They are quick, often rough, and you make many of them while
+  you get to know your data.
+- **Explanatory** figures are for *others*. They carry one clear message, with a title that states it,
+  labeled axes, units, a legend and a data source.
+
+Most of the figures in a research project are exploratory. The few that reach a paper, poster or
+report should be carefully designed explanatory figures.
+
+## Advantages and risks
+
+| Advantages | Risks |
+|---|---|
+| Fast comparison of many values | A misleading scale can exaggerate or hide differences |
+| Reveals trends, clusters and outliers | Too much decoration ("chartjunk") adds noise, not information |
+| Exposes data quality problems | The wrong chart type can suggest relationships that are not there |
+| Communicates across expertise levels | Poor color choices exclude readers with color vision deficiency |
+| Makes results memorable | A polished figure can make weak evidence look convincing |
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### How a correct chart can still mislead
+
+The two bar charts below show exactly the same numbers. On the left, the vertical axis starts at 70,
+which makes the differences between countries look enormous. On the right, the axis starts at 0, and
+the countries turn out to be quite similar.
+
+![The same life expectancy data with a truncated axis (left) and a full axis (right)](dv_misleading_axis.png){alt="Two bar charts of 2007 life expectancy for Mexico, the United States, Cuba and Canada. The left chart's axis starts at 70 years, so Canada's bar looks about three times taller than Mexico's. The right chart's axis starts at 0, and all four bars look nearly the same height, between 76 and 81 years."}
+
+Bar charts should almost always start at zero, because readers compare bar lengths. Line charts and
+dot plots can start elsewhere, because readers compare positions, but the axis must be clearly
+labeled.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Big data and visualization
+
+Large datasets make visualization more important, not less:
+
+- **Volume.** Nobody can read a million rows, but a histogram, density plot or map can show the whole
+  distribution at once.
+- **Variety.** Combining tables, text and locations often calls for layered figures, such as a map
+  with a chart beside it.
+- **Many variables.** With dozens of variables, small multiples (many small, identical charts, one per
+  group) or scatterplot matrices let you compare them systematically.
+- **Interactivity.** Zooming, filtering and hover tooltips let readers explore data that would
+  overwhelm a static figure.
+
+Large datasets also bring practical problems. Plotting millions of points can be slow and produce a
+solid blob of ink. Sampling, aggregating (for example into hexagons or counties) and transparency are
+the usual remedies.
+
+## Common chart types and what they are for
+
+| Question | Chart type |
+|---|---|
+| How does a value change over time? | Line chart |
+| How do categories compare? | Bar chart (horizontal if labels are long) |
+| How are values distributed? | Histogram, box plot |
+| Are two numeric variables related? | Scatter plot |
+| How do many variables relate to each other? | Correlation heatmap, scatterplot matrix |
+| How does a whole divide into parts? | Stacked bar; pie chart only for 2 or 3 parts |
+| Where does something happen? | Map (choropleth, proportional symbols, dots; see the map episodes) |
+
+## Tools
+
+| Tool | Good for | Cost | In this curriculum |
+|---|---|---|---|
+| Excel or Google Sheets | Quick bar and line charts | Free or licensed | Not covered |
+| Tableau Public | Interactive dashboards without code | Free public version | Not covered |
+| **Python** (Matplotlib, Seaborn, Plotly, GeoPandas) | Reproducible charts and maps, from quick to publication quality | Free, open source | **The notebooks in this episode** |
+| **QGIS** | Desktop mapping and cartographic layouts | Free, open source | **The QGIS episode of this module** |
+| R (ggplot2, tmap, sf) | Statistical graphics and maps | Free, open source | Not covered |
+| JavaScript (D3, Leaflet) | Custom interactive web graphics | Free, open source | Not covered |
+
+We use **Python in Google Colab** for charts and simple maps, and **QGIS** for designed maps, because
+both are free and widely used in the social sciences.
+
+## Principles of effective visualization
+
+These principles come from the work of Edward Tufte, William Cleveland, Alberto Cairo and others.
+
+1. **Start with the question.** Decide what the figure should show before choosing a chart type.
+2. **Choose the right chart type** for that question (see the table above).
+3. **Label everything.** A title that states the message, axis labels with units, a legend and a
+   data source.
+4. **Be honest with scales.** Start bar charts at zero, and say clearly when an axis does not.
+5. **Remove clutter.** Delete anything that does not help the reader: heavy gridlines, 3D effects,
+   background images, redundant labels.
+6. **Use color with purpose.** Color should encode data or draw attention, not decorate. Use
+   colorblind safe palettes such as viridis or ColorBrewer schemes.
+7. **Prefer small multiples to crowded charts.** Several simple panels beat one chart with ten lines.
+8. **Never put two unrelated scales on one axis.** Temperature and rainfall belong in two panels, not
+   on one shared y-axis.
+9. **Make it accessible.** Add alt text, keep good contrast, and do not rely on color alone.
+
+## Ethics
+
+Visualizations influence decisions about funding, policy and people's lives.
+
+- Do not cherry pick time windows, places or subsets to support a conclusion.
+- State your data source and its limitations.
+- Protect privacy. Maps of individual addresses or small areas can identify people.
+- Be careful with sensitive topics such as health, crime or immigration. How you classify and color
+  data can stigmatize places and the people who live there.
+
+## Practice
+
+Work through the notebooks below in Google Colab. Click **File > Save a copy in Drive** first so you
+can save your changes.
+
+:::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 1: Exploratory or explanatory?
+
+For each figure, decide whether it is exploratory or explanatory:
+
+1. A quick histogram you make to check whether income values look reasonable.
+2. A map of county vaccination rates in a public health department press release.
+3. A scatterplot matrix of ten survey variables you look at before choosing a model.
+
+:::::::::::::::::::::::: solution
+
+1. Exploratory: it is for you, to check the data.
+2. Explanatory: it carries one message to a general audience, so it needs a clear title, legend,
+   source and careful color choices.
+3. Exploratory: it helps you decide what to analyze next.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 2: Spot the problems
+
+A colleague shows you a 3D pie chart with 12 slices in rainbow colors, no title and no labels, showing
+the share of survey respondents in each of 12 age groups. List at least four problems and suggest a
+better chart.
+
+:::::::::::::::::::::::: solution
+
+- 3D distorts slice sizes: front slices look bigger than back slices.
+- Twelve slices are too many to compare by angle.
+- Rainbow colors have no order, even though age groups do, and some colors are hard to tell apart for
+  people with color vision deficiency.
+- No title, labels or percentages, so the reader cannot tell what is shown.
+
+A better choice is a **bar chart** (or histogram) of the 12 age groups in order, in a single color,
+with a title, labeled axes and the survey source.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Notebooks
+
+| Level | Notebook | What you will do |
+|---|---|---|
+| Beginner | <a href="https://colab.research.google.com/github/SpatialTurn/DataVisualization/blob/main/notebooks/01a_Making_a_Good_Chart.ipynb" target="_blank">1a. Making a Good Chart</a> | Build line and bar charts, then fix common problems: missing labels, truncated axes, wrong chart type, too many colors |
+| Intermediate | <a href="https://colab.research.google.com/github/SpatialTurn/DataVisualization/blob/main/notebooks/01b_Choosing_the_Right_Chart.ipynb" target="_blank">1b. Choosing the Right Chart</a> | Distributions, scatter plots, small multiples, correlation heatmaps and interactive charts |
+| Advanced | <a href="https://colab.research.google.com/github/SpatialTurn/DataVisualization/blob/main/notebooks/01c_From_Charts_to_Maps.ipynb" target="_blank">1c. From Charts to Maps</a> | Choropleth maps, normalization, classification methods, colorblind safe palettes and interactive maps |
+
+The notebooks use datasets built into Plotly, so they need no download or account. Notebook 1c also
+offers an optional section for learners with a free Census API key.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
-- Data visualization turns numbers into stories that the human brain can understand quickly.
-- Good visualizations reveal patterns, trends, and outliers that are invisible in spreadsheets.
-- Poor design can mislead audiences more powerfully than raw data ever could.
-- Big data demands interactive, scalable, and often multi-dimensional visualizations.
-- Choose the right tool for your audience and skill level — start simple and iterate.
-- Always prioritize clarity, honesty, and accessibility over visual flair.
+
+- Data visualization turns numbers into positions, lengths, areas and colors that people can compare
+  quickly.
+- Exploratory figures help you understand your data; explanatory figures communicate one message to
+  others.
+- Correct data can still mislead through truncated axes, the wrong chart type or poor color choices.
+- Choose the chart type from the question, label everything, and keep scales honest.
+- Python and QGIS are free tools that cover charts, maps and cartographic layouts.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-## What Is Data Visualization?
-
-**Data visualization** is the graphical representation of information and data.  
-Instead of showing rows and columns of numbers, it uses charts, graphs, maps, diagrams, and interactive dashboards to make patterns, trends, relationships, and outliers immediately understandable.
-
-Think of it as **data storytelling** with graphics. A well-designed visualization does in seconds what a 10-page spreadsheet cannot: it lets the human brain — which processes images 60,000 times faster than text — grasp complex information at a glance.
-
-In the Carpentries context, data visualization is not just "making pretty pictures." It is a core skill that bridges **data wrangling** (what you learned in previous episodes) and **data-driven decision making**.
-
-## Why Is Data Visualization Important?
-
-1. **Humans are visual creatures**  
-   Our brains devote more than 50% of their processing power to vision. A bar chart showing sales growth is far more memorable than a table of 50 monthly figures.
-
-2. **Reveals what numbers hide**  
-   - Trends over time  
-   - Clusters and correlations  
-   - Outliers and anomalies  
-   - Geographic patterns  
-   - Distributions and variability  
-
-3. **Enables faster decision-making**  
-   Executives, scientists, journalists, and policymakers routinely use visualizations to justify budgets, publish papers, or influence public opinion.
-
-4. **Democratizes data**  
-   A clear chart can be understood by domain experts and non-technical stakeholders alike.
-
-5. **Supports both exploration and explanation**  
-   - **Exploratory visualizations** help *you* discover insights while analyzing data.  
-   - **Explanatory visualizations** help *others* understand your discoveries.
-
-## Advantages of Data Visualization
-
-- **Speed**: Spot trends in seconds instead of hours.
-- **Clarity**: Reduce cognitive load — one image can replace thousands of numbers.
-- **Pattern recognition**: Humans excel at seeing lines, clusters, and shapes.
-- **Engagement**: Colorful, interactive visuals capture attention and improve retention.
-- **Storytelling power**: Turn dry statistics into compelling narratives.
-- **Error detection**: Visuals often reveal data quality problems (missing values, typos, impossible ranges) that automated checks miss.
-- **Accessibility for diverse audiences**: Good visuals can communicate across language barriers and technical skill levels.
-
-## Disadvantages and Risks
-
-- **Misleading results**: A truncated y-axis, 3D effects, or cherry-picked colors can completely distort the truth (classic example: the "exploding" pie chart).
-- **Chartjunk** (Edward Tufte's term): Decorative elements that add noise without adding information.
-- **Time investment**: Creating a professional, publication-ready visualization can take longer than the analysis itself.
-- **Skill gap**: Requires both analytical thinking *and* design sensibility.
-- **Over-simplification**: Complex multi-variable relationships can be flattened into something misleading.
-- **Accessibility barriers**: Poor color contrast or lack of alt text excludes people with color blindness or screen readers.
-
-> **Callout: The "lying with charts" phenomenon**  
-> Always ask: "Does this visual tell the *whole* story, or just the story I want to tell?"
-
-## Big Data and the Need for Visualization
-
-The explosion of big data (volume, velocity, variety, veracity) has made visualization not just helpful — but **essential**.
-
-- **Volume**: A 1-million-row dataset is impossible to read. A heatmap or density plot shows the entire distribution instantly.
-- **Velocity**: Real-time dashboards (stock markets, COVID-19 trackers, IoT sensor networks) update every second.
-- **Variety**: Combining structured tables, text, images, and geospatial data requires multi-layered visuals (e.g., a map with overlaid time-series).
-- **Dimensionality**: With 50+ variables, we use techniques like PCA, t-SNE, or parallel coordinates plots to reduce complexity.
-
-Modern big-data visualizations are often:
-- Interactive (zoom, filter, hover tooltips)
-- Scalable (handle millions of points without crashing)
-- Collaborative (shared dashboards in Tableau Server, Power BI, or Plotly Dash)
-
-## Real-World Examples
-
-### Simple but powerful
-- **Line chart**: Global temperature rise 1880–2025 (clear upward trend)
-- **Bar chart**: Top 10 countries by renewable energy adoption
-- **Scatter plot**: Relationship between study hours and exam scores (with regression line)
-
-### More advanced
-- **Heatmap**: Correlation matrix of 20 variables in a genomics dataset
-- **Treemap**: Breakdown of a company’s revenue by department and region
-- **Network graph**: Social media connections or protein interaction maps
-- **Choropleth map**: U.S. election results or COVID case rates by county
-- **Animated bubble chart** (Hans Rosling style): 200 years of health and wealth data showing global progress
-
-### Good vs. Bad examples (you will practice these in exercises)
-- **Good**: Minimalist line chart with clear labels and honest scale.
-- **Bad**: 3D exploding pie chart with 12 slices, rainbow colors, and no legend.
-
-## Popular Tools — From Beginner to Advanced
-
-| Skill Level      | Tool/Library                  | Best For                          | Open Source? | Carpentries Recommendation |
-|------------------|-------------------------------|-----------------------------------|--------------|----------------------------|
-| Beginner        | Excel / Google Sheets        | Quick bar/line/pie charts        | No          | Great starting point      |
-| Beginner–Intermediate | Tableau Public / Power BI   | Interactive dashboards           | Partial     | Excellent for non-coders  |
-| Intermediate    | Python + Matplotlib/Seaborn  | Publication-quality static plots | Yes         | **Highly recommended**    |
-| Intermediate–Advanced | Python + Plotly             | Interactive web-ready charts     | Yes         | Perfect for sharing       |
-| Advanced        | R + ggplot2                  | Statistical graphics             | Yes         | Data Carpentry favorite   |
-| Advanced        | JavaScript + D3.js           | Fully custom web visualizations  | Yes         | For web developers        |
-| All levels      | Observable / Vega-Lite       | Notebook-style interactive viz   | Yes         | Modern & flexible         |
-
-In this workshop series we will focus primarily on **Python** (Matplotlib, Seaborn, Plotly) and briefly touch on R’s ggplot2 because they integrate seamlessly with the data-cleaning skills you already learned.
-
-## Principles of Effective Visualization (The "Rules")
-
-Inspired by Edward Tufte, William Cleveland, and Alberto Cairo:
-
-1. **Maximize data-ink ratio** — remove everything that is not data.
-2. **Use small multiples** instead of overloading one chart.
-3. **Choose the right chart type** for the message (never use pie charts for >5 categories!).
-4. **Label everything** clearly — titles, axes, legends, units.
-5. **Be honest** — never truncate axes without disclosure.
-6. **Consider color carefully** — use colorblind-friendly palettes (ColorBrewer, viridis).
-7. **Make it accessible** — alt text, high contrast, patterns in addition to color.
-8. **Tell a story** — guide the viewer’s eye with titles, annotations, and sequence.
-
-## Ethical Considerations
-
-- Visualizations can influence policy, investment, and public opinion.
-- Avoid cherry-picking time windows or subsets.
-- Disclose data sources and limitations.
-- Respect privacy (especially with geospatial or personal data).
-
-## Challenges You Will Face (and How We Solve Them)
-
-- Too many variables → dimensionality reduction + faceting
-- Performance with millions of points → sampling, aggregation, or WebGL-based tools
-- Reproducibility → always save code alongside the image
-- Version control → store plots in Git (we’ll show you how)
-
-## Key Takeaways
-
-Data visualization is not decoration — it is **analysis made visible**.  
-Mastering it will transform how you explore data, how you communicate results, and how much impact your work has.
-
-In the next episodes we will:
-
-- Build your first publication-ready plots in Python.
-- Learn how to critique and improve existing visualizations.
-- Combine visualization with statistical analysis.
-
----
-
-**Exercise (30 min)**  
-1. Open the google collab file in `Start Here` Module [here](https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb). Make sure to make your own copy to save progress! 
-
-2. Alternatively, refer the Bad and Good Plotting techniques in this module. Understand what the basic requirements of producing a good plot looks like.
-
-
-# Module Overview
-
-| Lesson            | Overview                                                                                                   |
-|-------------------|------------------------------------------------------------------------------------------------------------|
-| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/goodbadplotting.ipynb" target="_blank">Beginner</a>  | Basics of Good & Bad Plotting |
-| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/complexvisuals.ipynb" target="_blank">Intermediate</a>  | Basics of More Complex Visuals |
-| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/hardestvisuals.ipynb" target="_blank">Complex</a>  | Basics of Some Other Visuals |
