@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Data Visualization: Key Points</title>
+<title>Data Visualization and Cartography for Social Scientists: Key Points</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="assets/styles.css">
 <script src="assets/scripts.js" type="text/javascript"></script><!-- mathjax --><!-- NOTE: https://docs.mathjax.org/en/latest/output/mathml.html#mathml-support --><!-- Changes from V2 to V4: https://mathjax.github.io/MathJax-demos-web/convert-configuration/convert-configuration.html
@@ -41,15 +41,15 @@
     <div class="col-md-8">
       <div class="large-logo">
         <a href="index.html">
-        <img id="incubator-logo" alt="Lesson Description" src="assets/images/incubator-logo.svg"></a>
+        <img id="incubator-logo" alt="Data Visualization and Cartography for Social Scientists" src="assets/images/incubator-logo.svg"></a>
 
-        <span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -100,10 +100,10 @@
     </button>
     <div class="nav-logo">
       <a href="index.html">
-      <img class="small-logo" alt="Lesson Description" src="assets/images/incubator-logo-sm.svg"></a>
+      <img class="small-logo" alt="Data Visualization and Cartography for Social Scientists" src="assets/images/incubator-logo-sm.svg"></a>
     </div>
     <div class="lesson-title-md">
-      Data Visualization
+      Data Visualization and Cartography for Social Scientists
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -114,7 +114,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Data Visualization
+            Data Visualization and Cartography for Social Scientists
           </span>
         </li>
         <li class="nav-item">
@@ -374,26 +374,68 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Key Points</h1>
         
-<section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction to Data VisualizationModule Overview<a class="anchor" aria-label="anchor" href="#module-overview"></a></a></h2>
+<section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction to Data Visualization</a></h2>
 <hr class="half-width">
 <ul>
-<li>Data visualization turns numbers into stories that the human brain
-can understand quickly.</li>
-<li>Good visualizations reveal patterns, trends, and outliers that are
-invisible in spreadsheets.</li>
-<li>Poor design can mislead audiences more powerfully than raw data ever
-could.</li>
-<li>Big data demands interactive, scalable, and often multi-dimensional
-visualizations.</li>
-<li>Choose the right tool for your audience and skill level — start
-simple and iterate.</li>
-<li>Always prioritize clarity, honesty, and accessibility over visual
-flair.</li>
+<li>Data visualization turns numbers into positions, lengths, areas and
+colors that people can compare quickly.</li>
+<li>Exploratory figures help you understand your data; explanatory
+figures communicate one message to others.</li>
+<li>Correct data can still mislead through truncated axes, the wrong
+chart type or poor color choices.</li>
+<li>Choose the chart type from the question, label everything, and keep
+scales honest.</li>
+<li>Python and QGIS are free tools that cover charts, maps and
+cartographic layouts.</li>
 </ul></section><section id="mapvisual"><h2 class="section-heading"><a href="mapvisual.html">Cartography Checklists</a></h2>
-<hr class="half-width"></section><section id="mapbasics"><h2 class="section-heading"><a href="mapbasics.html">Fundamentals of Map Design</a></h2>
-<hr class="half-width"></section><section id="qgisintro"><h2 class="section-heading"><a href="qgisintro.html">Getting Started with QGIS: Your First Map</a></h2>
-<hr class="half-width"></section><section id="accessibility"><h2 class="section-heading"><a href="accessibility.html">Accessibility in Map Design</a></h2>
-<hr class="half-width"></section>
+<hr class="half-width">
+<ul>
+<li>Decide the audience, message and medium before designing a map.</li>
+<li>State the message in the title and show only the data that supports
+it.</li>
+<li>Rates and counts answer different questions; choose
+deliberately.</li>
+<li>Design choices such as palette and classification change what
+readers believe.</li>
+<li>Review every map against a checklist before sharing it.</li>
+</ul></section><section id="mapbasics"><h2 class="section-heading"><a href="mapbasics.html">Fundamentals of Map Design</a></h2>
+<hr class="half-width">
+<ul>
+<li>A map layout needs a title, legend and source, plus a scale bar and
+north arrow when they help.</li>
+<li>Sequential, diverging and categorical color schemes match ordered,
+centered and unordered data.</li>
+<li>Every projection distorts something; use equal area projections for
+thematic maps.</li>
+<li>Choropleth maps need rates; show counts with proportional symbols or
+dots.</li>
+<li>The classification method changes the pattern a map shows; use the
+same breaks to compare maps.</li>
+</ul></section><section id="qgisintro"><h2 class="section-heading"><a href="qgisintro.html">Getting Started with QGIS: Your First Map</a></h2>
+<hr class="half-width">
+<ul>
+<li>Add Vector Layer with the HTTP(S) protocol loads data straight from
+a web address.</li>
+<li>The attribute table holds the data behind every styling choice.</li>
+<li>Use Categorized for categories and Graduated for numbers, and
+compare classification modes.</li>
+<li>A Print Layout combines the map with its title, legend, scale bar,
+north arrow and source.</li>
+<li>Save the project often; export layouts as PNG or PDF.</li>
+</ul></section><section id="accessibility"><h2 class="section-heading"><a href="accessibility.html">Accessibility in Map Design</a></h2>
+<hr class="half-width">
+<ul>
+<li>About 1 in 12 men of Northern European ancestry has a red-green
+color vision deficiency.</li>
+<li>Vary lightness, not just hue, so classes stay distinguishable for
+everyone.</li>
+<li>Use colorblind-safe palettes such as viridis, cividis, Blues or
+ColorBrewer’s colorblind safe schemes.</li>
+<li>Add a second cue (labels, patterns, shapes) when categories
+matter.</li>
+<li>Test with a simulator such as QGIS Preview Mode, and write alt text
+for maps shared online.</li>
+</ul></section>
 </div>
     </main>
 </div>
@@ -406,14 +448,14 @@ flair.</li>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/SpatialTurn/DataVisualization/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
+        | <a href="https://github.com/SpatialTurn/DataVisualization/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/SpatialTurn/DataVisualization/" class="external-link">Source</a></p>
         <p>
         <a href="citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:ilindsay@purdue.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -433,18 +475,18 @@ flair.</li>
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/key-points.html",
+  "@id": "https://SpatialTurn.github.io/DataVisualization/key-points.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "visualization, GIS",
+  "keywords": "data visualization, cartography, map design, QGIS, Python, accessibility, GIS, social science",
   "name": "Key Points",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/key-points.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/key-points.html",
-  "dateCreated": "2026-04-22",
-  "dateModified": "2026-10-13",
-  "datePublished": "2026-10-13"
+  "url": "https://SpatialTurn.github.io/DataVisualization/key-points.html",
+  "identifier": "https://SpatialTurn.github.io/DataVisualization/key-points.html",
+  "dateCreated": "2025-05-23",
+  "dateModified": "2026-10-17",
+  "datePublished": "2026-10-17"
 }
 
   </script><script>

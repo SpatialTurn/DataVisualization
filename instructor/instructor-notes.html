@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Data Visualization: Instructor Notes</title>
+<title>Data Visualization and Cartography for Social Scientists: Instructor Notes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="../assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="../assets/styles.css">
 <script src="../assets/scripts.js" type="text/javascript"></script><!-- mathjax --><!-- NOTE: https://docs.mathjax.org/en/latest/output/mathml.html#mathml-support --><!-- Changes from V2 to V4: https://mathjax.github.io/MathJax-demos-web/convert-configuration/convert-configuration.html
@@ -41,15 +41,15 @@
     <div class="col-md-8">
       <div class="large-logo">
         <a href="index.html">
-        <img id="incubator-logo" alt="Lesson Description" src="../assets/images/incubator-logo.svg"></a>
+        <img id="incubator-logo" alt="Data Visualization and Cartography for Social Scientists" src="../assets/images/incubator-logo.svg"></a>
 
-        <span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -100,10 +100,10 @@
     </button>
     <div class="nav-logo">
       <a href="index.html">
-      <img class="small-logo" alt="Lesson Description" src="../assets/images/incubator-logo-sm.svg"></a>
+      <img class="small-logo" alt="Data Visualization and Cartography for Social Scientists" src="../assets/images/incubator-logo-sm.svg"></a>
     </div>
     <div class="lesson-title-md">
-      Data Visualization
+      Data Visualization and Cartography for Social Scientists
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -114,7 +114,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Data Visualization
+            Data Visualization and Cartography for Social Scientists
           </span>
         </li>
         <li class="nav-item">
@@ -377,14 +377,149 @@
         <h1>Instructor Notes</h1>
         
 
-<p>This is a placeholder file. Please add content here.</p>
+<section><h2 class="section-heading" id="overall-approach">Overall approach<a class="anchor" aria-label="anchor" href="#overall-approach"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>This module mixes <strong>concepts</strong> (Cartography Checklists,
+Fundamentals of Map Design), <strong>Python</strong> (the Introduction
+notebooks) and <strong>QGIS</strong> (Getting Started with QGIS,
+Accessibility). Make sure learners have both a Google account and QGIS
+installed before the session; QGIS installation is the most common
+delay.</li>
+<li>Every figure in the concept episodes was generated from open data
+(U.S. Census Bureau, Bureau of Labor Statistics, Natural Earth,
+Gapminder) with code, so the examples are reproducible and properly
+credited.</li>
+<li>All data is read from the web. The notebooks use Plotly’s built-in
+datasets; the QGIS episode loads GeoJSON files from this repository’s
+<code>data/</code> folder by URL.</li>
+<li>Suggested timing for a half day: Introduction (30 min plus notebook
+1a), Checklists (30 min), Map Design (60 min), QGIS (75 min),
+Accessibility (30 min). Notebooks 1b and 1c work well as take-home
+material.</li>
+</ul></section><section><h2 class="section-heading" id="episode-by-episode">Episode by episode<a class="anchor" aria-label="anchor" href="#episode-by-episode"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="introduction-to-data-visualization">Introduction to Data Visualization<a class="anchor" aria-label="anchor" href="#introduction-to-data-visualization"></a>
+</h3>
+<ul>
+<li>Start with the misleading axis figure; it gets an immediate reaction
+and makes the point that correct data can still mislead.</li>
+<li>Notebook 1a needs no prior plotting experience. Notebook 1c includes
+an optional Census section that skips itself when no API key is entered,
+so <strong>Runtime &gt; Run all</strong> works for everyone.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="cartography-checklists">Cartography Checklists<a class="anchor" aria-label="anchor" href="#cartography-checklists"></a>
+</h3>
+<ul>
+<li>Ask learners to bring (or find) a map from the news and apply the
+checklist to it during the discussion.</li>
+<li>The “bad map” is deliberately terrible; ask the group to list every
+problem before revealing the list.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="fundamentals-of-map-design">Fundamentals of Map Design<a class="anchor" aria-label="anchor" href="#fundamentals-of-map-design"></a>
+</h3>
+<ul>
+<li>Normalization and classification are the two ideas learners most
+often get wrong in their own work. Spend time on the count versus
+percent figure and the six classification maps.</li>
+<li>The classification figure uses Indiana population density, which is
+strongly skewed. Point out how equal interval puts almost everything in
+one class, and show the histogram figure to explain why.</li>
+<li>Use The True Size Of website live; dragging Russia or Greenland to
+the equator is memorable.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="getting-started-with-qgis">Getting Started with QGIS<a class="anchor" aria-label="anchor" href="#getting-started-with-qgis"></a>
+</h3>
+<ul>
+<li>Loading from a web address (Layer &gt; Add Layer &gt; Add Vector
+Layer &gt; Protocol: HTTP(S)) avoids file downloads and path problems.
+If a network blocks it, the same GeoJSON files can be downloaded from
+the repository’s <code>data/</code> folder and loaded as files.</li>
+<li>In QGIS, the OpenStreetMap basemap works normally. (In Colab it does
+not, which is why the notebooks use an Esri basemap.)</li>
+<li>Learners often press <strong>OK</strong> instead of
+<strong>Apply</strong> while comparing classification modes; encourage
+<strong>Apply</strong> so the dialog stays open.</li>
+<li>Remind learners to rename layers before making a legend.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="accessibility-in-map-design">Accessibility in Map Design<a class="anchor" aria-label="anchor" href="#accessibility-in-map-design"></a>
+</h3>
+<ul>
+<li>Turn on <strong>View &gt; Preview Mode &gt; Simulate Color Blindness
+(Deuteranope)</strong> on the projector with a red-green map; it is the
+most convincing demonstration.</li>
+<li>Prevalence figures (about 8% of men and 0.5% of women) are for
+people of Northern European ancestry; rates are lower in many other
+populations.</li>
+</ul>
+</div>
+</section><section><h2 class="section-heading" id="common-problems">Common problems<a class="anchor" aria-label="anchor" href="#common-problems"></a>
+</h2>
+<hr class="half-width">
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr>
+<th>Symptom</th>
+<th>Likely cause</th>
+<th>Fix</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>QGIS will not open on macOS</td>
+<td>Security setting</td>
+<td>Right-click the app and choose <strong>Open</strong>
+</td>
+</tr>
+<tr>
+<td>A web layer loads but nothing appears</td>
+<td>Layer is off screen or under the basemap</td>
+<td>Right-click the layer &gt; <strong>Zoom to Layer</strong>; drag it
+above the basemap</td>
+</tr>
+<tr>
+<td>Graduated symbology shows one color</td>
+<td>Wrong field (text or an ID) selected</td>
+<td>Choose a numeric field such as <code>density</code>
+</td>
+</tr>
+<tr>
+<td>Colab <code>NameError</code>
+</td>
+<td>A cell was skipped</td>
+<td><strong>Runtime &gt; Run before</strong></td>
+</tr>
+<tr>
+<td>Interactive map shows “403” or “API key required”</td>
+<td>OpenStreetMap or CARTO tiles blocked in Colab</td>
+<td>Use <code>tiles="Esri.WorldGrayCanvas"</code>
+</td>
+</tr>
+<tr>
+<td>Census section in notebook 1c fails</td>
+<td>Key missing, mistyped or not activated</td>
+<td>Check the key and its activation email, or skip the section</td>
+</tr>
+</tbody>
+</table>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-
-
-      <section id="aggregate-instructor-notes"><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction to Data VisualizationModule Overview<a class="anchor" aria-label="anchor" href="#module-overview"></a></a></h2>
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+--></section><section id="aggregate-instructor-notes"><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction to Data Visualization</a></h2>
 <hr class="half-width"></section><section id="mapvisual"><h2 class="section-heading"><a href="mapvisual.html">Cartography Checklists</a></h2>
 <hr class="half-width"></section><section id="mapbasics"><h2 class="section-heading"><a href="mapbasics.html">Fundamentals of Map Design</a></h2>
 <hr class="half-width"></section><section id="qgisintro"><h2 class="section-heading"><a href="qgisintro.html">Getting Started with QGIS: Your First Map</a></h2>
@@ -402,14 +537,14 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/SpatialTurn/DataVisualization/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
+        | <a href="https://github.com/SpatialTurn/DataVisualization/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/SpatialTurn/DataVisualization/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:ilindsay@purdue.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -429,18 +564,18 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/instructor/instructor-notes.html",
+  "@id": "https://SpatialTurn.github.io/DataVisualization/instructor/instructor-notes.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "visualization, GIS",
+  "keywords": "data visualization, cartography, map design, QGIS, Python, accessibility, GIS, social science",
   "name": "Instructor Notes",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/instructor/instructor-notes.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/instructor/instructor-notes.html",
-  "dateCreated": "2026-04-22",
-  "dateModified": "2026-10-13",
-  "datePublished": "2026-10-13"
+  "url": "https://SpatialTurn.github.io/DataVisualization/instructor/instructor-notes.html",
+  "identifier": "https://SpatialTurn.github.io/DataVisualization/instructor/instructor-notes.html",
+  "dateCreated": "2025-05-23",
+  "dateModified": "2026-10-17",
+  "datePublished": "2026-10-17"
 }
 
   </script><script>
