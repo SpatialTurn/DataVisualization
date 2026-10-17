@@ -11,7 +11,6 @@ scientists and other beginners, and combines design principles with hands-on pra
 | Introduction to Data Visualization | Why we visualize, how charts mislead, and design principles that apply to every figure | Python notebooks |
 | Cartography Checklists | The questions to answer before making any map: audience, message, data, medium | Concepts |
 | Fundamentals of Map Design | Map elements, color schemes, projections, thematic map types, normalization and classification | Concepts, Python and QGIS equivalents |
-| Getting Started with QGIS | Loading data from the web, styling layers, building a choropleth map and exporting a layout | QGIS |
 | Accessibility in Map Design | Designing maps for people with color vision deficiency, testing palettes and writing alt text | QGIS and Python |
 
 The episodes are designed to be taken in order, but the concept episodes (Cartography Checklists and
@@ -23,13 +22,14 @@ Fundamentals of Map Design) can be read on their own.
 
 - A Google account, to open the notebooks in Google Colab
 - QGIS installed on your computer (see the Setup instructions below)
+- New to QGIS? Work through the Foundations module's [Getting Started with QGIS](https://spatialturn.github.io/Foundations/qgisintro.html) episode first
 - For the notebooks: basic Python, such as running cells and working with a `pandas` DataFrame
 - No prior GIS or design experience is needed
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 All data used in this module is read directly from the web: the notebooks use datasets built into
-Plotly, and the QGIS episode loads small files hosted in this lesson's repository. Learners never need to
+Plotly, and the QGIS challenge in the Accessibility episode loads a small file from the Foundations module. Learners never need to
 download data by hand.
 
 This module is part of [Enabling the Geospatial Turn in the Social Sciences](https://spatialturn.github.io/),

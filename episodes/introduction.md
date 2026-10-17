@@ -123,7 +123,7 @@ the usual remedies.
 | Excel or Google Sheets | Quick bar and line charts | Free or licensed | Not covered |
 | Tableau Public | Interactive dashboards without code | Free public version | Not covered |
 | **Python** (Matplotlib, Seaborn, Plotly, GeoPandas) | Reproducible charts and maps, from quick to publication quality | Free, open source | **The notebooks in this episode** |
-| **QGIS** | Desktop mapping and cartographic layouts | Free, open source | **The QGIS episode of this module** |
+| **QGIS** | Desktop mapping and cartographic layouts | Free, open source | **The Foundations module's [Getting Started with QGIS](https://spatialturn.github.io/Foundations/qgisintro.html) episode** |
 | R (ggplot2, tmap, sf) | Statistical graphics and maps | Free, open source | Not covered |
 | JavaScript (D3, Leaflet) | Custom interactive web graphics | Free, open source | Not covered |
 
