@@ -26,7 +26,7 @@ The notebooks use datasets built into the Plotly library, so you never need to d
 
 ## Part 2: Install QGIS
 
-Follow the installation steps on the [central Setup page](https://spatialturn.github.io/Foundations/learners/setup.html) of the Foundations module, which also
+Follow the installation steps on the [central Setup page](https://spatialturn.github.io/Foundations/index.html#part-2-install-qgis) of the Foundations module, which also
 shows the parts of the QGIS window. If QGIS is new to you, work through the Foundations module's
 [Getting Started with QGIS](https://spatialturn.github.io/Foundations/qgisintro.html) episode before the Accessibility episode.
 
