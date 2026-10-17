@@ -199,6 +199,10 @@ areas or densities, use an equal area projection.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+This section is about choosing a projection for a map. For coordinate reference systems as part of your
+data (datums, EPSG codes, and the difference between defining and reprojecting a layer), see the Data
+Management module's [Coordinate Reference Systems](https://spatialturn.github.io/DataManagement/crs.html) episode.
+
 ---
 
 ## Labels and legends
