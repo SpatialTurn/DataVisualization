@@ -4,9 +4,9 @@ title: Setup
 
 This module uses two free tools:
 
-- **Google Colab** for the Python notebooks in the Introduction episode. It runs in your web browser,
-  so there is nothing to install.
-- **QGIS** for the Accessibility episode. It is a desktop program you install once.
+- **Google Colab** for the Python notebooks in the Introduction and Cartography in Python episodes. It runs
+  in your web browser, so there is nothing to install.
+- **QGIS** for the Cartography in QGIS and Accessibility episodes. It is a desktop program you install once.
 
 ## What you need
 

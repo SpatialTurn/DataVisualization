@@ -11,6 +11,8 @@ scientists and other beginners, and combines design principles with hands-on pra
 | Introduction to Data Visualization | Why we visualize, how charts mislead, and design principles that apply to every figure | Python notebooks |
 | Cartography Checklists | The questions to answer before making any map: audience, message, data, medium | Concepts |
 | Fundamentals of Map Design | Map elements, color schemes, projections, thematic map types, normalization and classification | Concepts, Python and QGIS equivalents |
+| Cartography in Python | Finished maps: layer order, labels with halos, basemaps, locator insets, scale bars, small multiples and export | Python notebooks |
+| Cartography in QGIS | The same map with rule-based styling and labeling, a print layout with a locator inset, and export | QGIS |
 | Accessibility in Map Design | Designing maps for people with color vision deficiency, testing palettes and writing alt text | QGIS and Python |
 
 The episodes are designed to be taken in order, but the concept episodes (Cartography Checklists and
@@ -28,8 +30,9 @@ Fundamentals of Map Design) can be read on their own.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-All data used in this module is read directly from the web: the notebooks use datasets built into
-Plotly, and the QGIS challenge in the Accessibility episode loads a small file from the Foundations module. Learners never need to
+All data used in this module is read directly from the web: the Introduction notebooks use datasets built
+into Plotly, and the Cartography episodes and the QGIS challenge in the Accessibility episode load small files
+from the Foundations and Case Studies modules. Learners never need to
 download data by hand.
 
 This module is part of [Enabling the Geospatial Turn in the Social Sciences](https://spatialturn.github.io/),
