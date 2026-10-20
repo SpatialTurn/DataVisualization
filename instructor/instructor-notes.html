@@ -281,7 +281,31 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="accessibility.html">4. Accessibility in Map Design</a>
+        <a href="cartography-python.html">4. Cartography in Python</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="cartography-qgis.html">5. Cartography in QGIS</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="accessibility.html">6. Accessibility in Map Design</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -427,6 +451,28 @@ the equator is memorable.</li>
 </ul>
 </div>
 <div class="section level3">
+<h3 id="cartography-in-python-and-in-qgis">Cartography in Python and in QGIS<a class="anchor" aria-label="anchor" href="#cartography-in-python-and-in-qgis"></a>
+</h3>
+<ul>
+<li>Both build the same finished map of car-free households in Lafayette
+(tracts, parks, city limits, a locator inset). Natural breaks differ
+slightly between tools (QGIS first break about 2.4%, mapclassify about
+4%).</li>
+<li>Python: the basemap uses Esri World Gray Canvas through contextily
+because OSM and CARTO tiles often fail in Colab; the cell skips the
+basemap gracefully if tiles cannot be fetched. Notebook 02b installs
+<code>matplotlib-scalebar</code>.</li>
+<li>QGIS: switching Graduated to Rule-based keeps the classes as rules;
+add the <code>IS NULL</code> rule for the dorm tract. <code>$area</code>
+uses the project ellipsoid; if label rules select nothing, set the
+ellipsoid to WGS 84.</li>
+<li>QGIS may show the datum transformation chooser (EPSG:4326 to 26916);
+the first option is fine.</li>
+<li>Scripted layout exports that include an online basemap can freeze
+QGIS on slow networks; for the class, keep the basemap optional.</li>
+</ul>
+</div>
+<div class="section level3">
 <h3 id="accessibility-in-map-design">Accessibility in Map Design<a class="anchor" aria-label="anchor" href="#accessibility-in-map-design"></a>
 </h3>
 <ul>
@@ -496,6 +542,8 @@ Add reference-style links below as needed.
 --></section><section id="aggregate-instructor-notes"><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction to Data Visualization</a></h2>
 <hr class="half-width"></section><section id="mapvisual"><h2 class="section-heading"><a href="mapvisual.html">Cartography Checklists</a></h2>
 <hr class="half-width"></section><section id="mapbasics"><h2 class="section-heading"><a href="mapbasics.html">Fundamentals of Map Design</a></h2>
+<hr class="half-width"></section><section id="cartography-python"><h2 class="section-heading"><a href="cartography-python.html">Cartography in Python</a></h2>
+<hr class="half-width"></section><section id="cartography-qgis"><h2 class="section-heading"><a href="cartography-qgis.html">Cartography in QGIS</a></h2>
 <hr class="half-width"></section><section id="accessibility"><h2 class="section-heading"><a href="accessibility.html">Accessibility in Map Design</a></h2>
 <hr class="half-width"></section></section>
 </div>

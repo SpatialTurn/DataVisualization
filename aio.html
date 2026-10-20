@@ -280,7 +280,31 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="accessibility.html">4. Accessibility in Map Design</a>
+        <a href="cartography-python.html">4. Cartography in Python</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="cartography-qgis.html">5. Cartography in QGIS</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="accessibility.html">6. Accessibility in Map Design</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -730,7 +754,7 @@ choosing a model.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Exploratory: it is for you, to check the data.</li>
@@ -762,7 +786,7 @@ better chart.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>3D distorts slice sizes: front slices look bigger than back
@@ -1544,7 +1568,7 @@ second and third? Is that the order the mapmaker would want?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Most readers notice the dark blue counties first (the data), then the
 large title, then the legend. That is the intended order: the data and
@@ -2057,7 +2081,7 @@ why?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>
@@ -2098,7 +2122,7 @@ and what would you divide by?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>
@@ -2258,6 +2282,926 @@ same breaks to compare maps.</li>
 Links listed here can be reused across pages as [text][name].
 Add reference-style links below as needed.
 -->
+</section></section><section id="aio-cartography-python"><p>Content from <a href="cartography-python.html">Cartography in Python</a></p>
+<hr>
+<p>Last updated on 2026-10-20 |
+
+        <a href="https://github.com/SpatialTurn/DataVisualization/edit/main/episodes/cartography-python.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do I turn a correct map into a finished one that others can read
+and print?</li>
+<li>How should layers, labels and a basemap be ordered and styled?</li>
+<li>When do small multiples need a shared scale?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Style and order layers by their role: subject, supporting features,
+context and reference</li>
+<li>Label features legibly and by rule, with halos</li>
+<li>Add a basemap responsibly, a locator inset, a true scale bar and a
+north arrow</li>
+<li>Build small multiples with separate or shared classifications</li>
+<li>Export maps for print and screen</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="from-a-correct-map-to-a-finished-map">From a correct map to a finished map<a class="anchor" aria-label="anchor" href="#from-a-correct-map-to-a-finished-map"></a>
+</h2>
+<hr class="half-width">
+<p>The <a href="mapbasics.html">Fundamentals of Map Design</a> episode
+covers what a thematic map shows: map elements, normalization,
+classification and color. This episode is about
+<strong>finishing</strong>: turning a correct choropleth into a map that
+a reader outside your project understands at a glance and that prints
+cleanly. The running example is the share of households without a car in
+Lafayette and West Lafayette, Indiana, with parks and city limits on
+top.</p>
+</section><section><h2 class="section-heading" id="visual-hierarchy-layer-by-layer">Visual hierarchy, layer by layer<a class="anchor" aria-label="anchor" href="#visual-hierarchy-layer-by-layer"></a>
+</h2>
+<hr class="half-width">
+<p>Every layer has a role, and its styling should match it:</p>
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr>
+<th>Role</th>
+<th>Example</th>
+<th>Styling</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>Subject</strong></td>
+<td>The choropleth of car-free households</td>
+<td>Strong color, full opacity</td>
+</tr>
+<tr>
+<td><strong>Supporting features</strong></td>
+<td>Parks, city limits</td>
+<td>Distinct but secondary: one hue, thin or dashed lines, some
+transparency</td>
+</tr>
+<tr>
+<td><strong>Context</strong></td>
+<td>Basemap, neighboring areas</td>
+<td>Quiet: gray, low contrast</td>
+</tr>
+<tr>
+<td><strong>Reference</strong></td>
+<td>Labels, scale bar, north arrow, source</td>
+<td>Small, legible, never decorative</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Order</strong> follows from the roles: polygons of the
+subject at the bottom, supporting outlines and points above them, labels
+on top, and the basemap underneath everything. A layer on top of a
+choropleth needs either no fill, transparency, or a strong outline so it
+does not hide what is underneath.</p>
+</section><section><h2 class="section-heading" id="labels">Labels<a class="anchor" aria-label="anchor" href="#labels"></a>
+</h2>
+<hr class="half-width">
+<p>Labels are reference information. They should be findable, legible
+and not in the way.</p>
+<ul>
+<li>
+<strong>Label sparingly.</strong> Label what the reader needs to
+orient themselves or to understand the story: the largest parks, the two
+city names. Labeling all 68 parks makes none of them readable.</li>
+<li>
+<strong>Use a halo</strong> (a thin outline in the background color,
+called a <em>buffer</em> in QGIS). It keeps text readable over any color
+and is the single most effective labeling technique.</li>
+<li>
+<strong>Use type to signal kind.</strong> Common conventions:
+italics for water and areas (rivers, parks, neighborhoods), upright for
+places and points, larger or capitalized type for more important
+names.</li>
+<li>
+<strong>Place labels inside or next to their feature</strong>, never
+across a boundary. For polygons, a point guaranteed to be inside (a
+“representative point” or “point on surface”) is safer than the
+centroid, which can fall outside an L-shaped polygon.</li>
+<li>
+<strong>Choose rules, not exceptions.</strong> “Label parks over 30
+hectares” is reproducible; hand-picking labels is not.</li>
+</ul></section><section><h2 class="section-heading" id="basemaps">Basemaps<a class="anchor" aria-label="anchor" href="#basemaps"></a>
+</h2>
+<hr class="half-width">
+<p>A tiled basemap (OpenStreetMap, Esri, CARTO, Stamen) adds streets and
+place names for free, at a cost: visual noise, a dependence on an online
+service, and <strong>license conditions</strong>. Choose a quiet, gray
+basemap for thematic maps, keep its <strong>attribution</strong> text,
+and do not rely on it for print if you need full control or very high
+resolution. Basemap tiles are in Web Mercator (EPSG:3857); software
+reprojects them to your map’s CRS, which can blur their labels
+slightly.</p>
+</section><section><h2 class="section-heading" id="locator-insets-scale-bars-and-north-arrows">Locator insets, scale bars and north arrows<a class="anchor" aria-label="anchor" href="#locator-insets-scale-bars-and-north-arrows"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>A <strong>locator inset</strong> (a small map of the state or
+country with the study area highlighted) answers “where is this?” for
+readers who do not know the area. It does not need a scale bar or legend
+of its own.</li>
+<li>A <strong>scale bar</strong> is only true on a map in a
+<strong>projected</strong> CRS with little distortion over the map (a
+UTM zone or a state plane for a county). In degrees or Web Mercator at
+large extents the scale changes across the map, and a single bar
+misleads.</li>
+<li>A <strong>north arrow</strong> is only essential when north is not
+up, but it is cheap and many readers expect one.</li>
+</ul></section><section><h2 class="section-heading" id="small-multiples-and-shared-scales">Small multiples and shared scales<a class="anchor" aria-label="anchor" href="#small-multiples-and-shared-scales"></a>
+</h2>
+<hr class="half-width">
+<p>To compare several variables or years, repeat the same map in a grid
+of <strong>small multiples</strong>. The eye compares patterns across
+panels far better than it decodes several variables in one crowded
+map.</p>
+<p>Decide deliberately whether panels <strong>share a
+classification</strong>:</p>
+<ul>
+<li>
+<strong>Same variable or same units</strong> (one rate in different
+years, two rates you want to compare): use the <strong>same class breaks
+and colors</strong> in every panel, or the same dark color will mean
+different values.</li>
+<li>
+<strong>Different variables</strong> (income in dollars, children in
+percent): each panel needs its own classes and legend, and the reader
+compares patterns, not colors.</li>
+</ul></section><section><h2 class="section-heading" id="export">Export<a class="anchor" aria-label="anchor" href="#export"></a>
+</h2>
+<hr class="half-width">
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr>
+<th>Destination</th>
+<th>Format</th>
+<th>Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Print, a paper, a poster</td>
+<td>
+<strong>PDF</strong> (vector)</td>
+<td>Sharp at any size; set the page or figure size to the printed
+size</td>
+</tr>
+<tr>
+<td>Slides, a website</td>
+<td>
+<strong>PNG</strong> at 200 to 300 dpi</td>
+<td>PNG keeps sharp edges; JPEG blurs lines and text</td>
+</tr>
+<tr>
+<td>Further editing (Illustrator, Inkscape)</td>
+<td><strong>SVG</strong></td>
+<td>Every element stays editable</td>
+</tr>
+</tbody>
+</table>
+<p>Check the exported file, not just the screen: font sizes, line widths
+and legend spacing often look different at print size.</p>
+<div id="the-same-map-in-qgis" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="the-same-map-in-qgis" class="callout-inner">
+<h3 class="callout-title">The same map in QGIS</h3>
+<div class="callout-content">
+<p>The <a href="cartography-qgis.html">Cartography in QGIS</a> episode
+makes the same map with rule-based styling and labeling and a print
+layout with a locator inset. Notebook 01c of this module covers the
+basics (choropleths, classification, palettes) used here.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="the-toolkit-in-code">The toolkit in code<a class="anchor" aria-label="anchor" href="#the-toolkit-in-code"></a>
+</h2>
+<hr class="half-width">
+<table class="table">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr>
+<th>Task</th>
+<th>Python</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Layer order</td>
+<td>
+<code>zorder=</code> on each <code>plot()</code> call;
+<code>alpha=</code> for transparency</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>
+<code>ax.set_xlim()</code>, <code>ax.set_ylim()</code> from a
+layer’s <code>total_bounds</code>
+</td>
+</tr>
+<tr>
+<td>Labels with halos</td>
+<td>
+<code>ax.text(..., path_effects=[patheffects.withStroke(linewidth=3, foreground="white")])</code>
+at <code>representative_point()</code>
+</td>
+</tr>
+<tr>
+<td>Basemap</td>
+<td><code>contextily.add_basemap(ax, crs=layer.crs, source=contextily.providers.Esri.WorldGrayCanvas)</code></td>
+</tr>
+<tr>
+<td>Legend for several layers</td>
+<td>Build <code>Patch</code> and <code>Line2D</code> handles and pass
+them to <code>ax.legend(handles=...)</code>
+</td>
+</tr>
+<tr>
+<td>Locator inset</td>
+<td>
+<code>inset = ax.inset_axes([left, bottom, width, height])</code>,
+then plot the state and the highlighted county</td>
+</tr>
+<tr>
+<td>Scale bar</td>
+<td>
+<code>ax.add_artist(ScaleBar(dx=1, units="m"))</code> from
+<code>matplotlib-scalebar</code>, for maps in meters</td>
+</tr>
+<tr>
+<td>Shared classes</td>
+<td>
+<code>scheme="UserDefined", classification_kwds={"bins": [...]}</code>
+in every panel</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>
+<code>fig.savefig("map.pdf")</code>,
+<code>fig.savefig("map.png", dpi=300, bbox_inches="tight")</code>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="challenge-1-what-is-wrong-with-this-map" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-what-is-wrong-with-this-map" class="callout-inner">
+<h3 class="callout-title">Challenge 1: What is wrong with this map?</h3>
+<div class="callout-content">
+<p>A map of poverty rates by tract uses a satellite basemap at full
+opacity, red and green classes, labels for every street, a scale bar on
+a Web Mercator map of the whole United States, and no source line. List
+the problems and a fix for each.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul>
+<li>Satellite basemap: too busy for a thematic map; use a quiet gray
+basemap or none, and keep the attribution.</li>
+<li>Red and green classes: unreadable for many readers with color vision
+deficiency, and a diverging scheme for a one-directional rate; use a
+sequential palette (see the Accessibility episode).</li>
+<li>Labels for every street: clutter; label only what orients the
+reader.</li>
+<li>Scale bar on a national Web Mercator map: the scale varies greatly
+with latitude; drop it or use an equal-area projection and a note.</li>
+<li>No source line: add the dataset and year.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-shared-scale-or-not" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-shared-scale-or-not" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Shared scale or not?</h3>
+<div class="callout-content">
+<p>You make four small multiples. Which need a shared classification?
+(a) Households without a car in 2015, 2018, 2021 and 2024. (b) Poverty
+rate, median income, share of children and population density in
+2024.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<ol style="list-style-type: lower-alpha">
+<li>
+<strong>Shared</strong>: the same variable over time, so the same
+color must mean the same value in every year. Compute breaks from all
+four years together. (b) <strong>Separate</strong>: four variables in
+different units; give each panel its own classes and legend, and let
+readers compare patterns.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Style each layer by its role; the subject is strong, context is
+quiet</li>
+<li>Label sparingly, by rule, with halos; italics for areas and
+water</li>
+<li>Use quiet basemaps and keep their attribution; scale bars need a
+projected CRS</li>
+<li>A locator inset shows where the map is; small multiples compare,
+with shared breaks only for comparable values</li>
+<li>Export PDF for print and PNG at 200 to 300 dpi for screens, and
+check the exported file</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="notebooks">Notebooks<a class="anchor" aria-label="anchor" href="#notebooks"></a>
+</h2>
+<hr class="half-width">
+<table class="table">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr>
+<th>Notebook</th>
+<th>What you will do</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><a href="https://colab.research.google.com/github/SpatialTurn/DataVisualization/blob/main/notebooks/02a_Layers_Labels_and_Basemaps.ipynb" target="_blank" class="external-link">2a.
+Layers, Labels and Basemaps</a></td>
+<td>Stack tracts, parks and city limits, zoom to the cities, label the
+largest parks with halos, add a basemap and a multi-layer legend</td>
+</tr>
+<tr>
+<td><a href="https://colab.research.google.com/github/SpatialTurn/DataVisualization/blob/main/notebooks/02b_Insets_Small_Multiples_and_Export.ipynb" target="_blank" class="external-link">2b.
+Insets, Small Multiples and Export</a></td>
+<td>Add a locator inset, a scale bar and a north arrow, compare four
+variables in small multiples, share a scale, and export PDF and PNG</td>
+</tr>
+</tbody>
+</table>
+<!--
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+--></section></section><section id="aio-cartography-qgis"><p>Content from <a href="cartography-qgis.html">Cartography in QGIS</a></p>
+<hr>
+<p>Last updated on 2026-10-20 |
+
+        <a href="https://github.com/SpatialTurn/DataVisualization/edit/main/episodes/cartography-qgis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do I turn a correct map into a finished one that others can read
+and print?</li>
+<li>How should layers, labels and a basemap be ordered and styled?</li>
+<li>When do small multiples need a shared scale?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Style and order layers by their role: subject, supporting features,
+context and reference</li>
+<li>Label features legibly and by rule, with halos</li>
+<li>Add a basemap responsibly, a locator inset, a true scale bar and a
+north arrow</li>
+<li>Use rule-based styling and labeling, and build a print layout with a
+locator inset</li>
+<li>Export maps for print and screen</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="from-a-correct-map-to-a-finished-map">From a correct map to a finished map<a class="anchor" aria-label="anchor" href="#from-a-correct-map-to-a-finished-map"></a>
+</h2>
+<hr class="half-width">
+<p>The <a href="mapbasics.html">Fundamentals of Map Design</a> episode
+covers what a thematic map shows: map elements, normalization,
+classification and color. This episode is about
+<strong>finishing</strong>: turning a correct choropleth into a map that
+a reader outside your project understands at a glance and that prints
+cleanly. The running example is the share of households without a car in
+Lafayette and West Lafayette, Indiana, with parks and city limits on
+top.</p>
+</section><section><h2 class="section-heading" id="visual-hierarchy-layer-by-layer">Visual hierarchy, layer by layer<a class="anchor" aria-label="anchor" href="#visual-hierarchy-layer-by-layer"></a>
+</h2>
+<hr class="half-width">
+<p>Every layer has a role, and its styling should match it:</p>
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr>
+<th>Role</th>
+<th>Example</th>
+<th>Styling</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>Subject</strong></td>
+<td>The choropleth of car-free households</td>
+<td>Strong color, full opacity</td>
+</tr>
+<tr>
+<td><strong>Supporting features</strong></td>
+<td>Parks, city limits</td>
+<td>Distinct but secondary: one hue, thin or dashed lines, some
+transparency</td>
+</tr>
+<tr>
+<td><strong>Context</strong></td>
+<td>Basemap, neighboring areas</td>
+<td>Quiet: gray, low contrast</td>
+</tr>
+<tr>
+<td><strong>Reference</strong></td>
+<td>Labels, scale bar, north arrow, source</td>
+<td>Small, legible, never decorative</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Order</strong> follows from the roles: polygons of the
+subject at the bottom, supporting outlines and points above them, labels
+on top, and the basemap underneath everything. A layer on top of a
+choropleth needs either no fill, transparency, or a strong outline so it
+does not hide what is underneath.</p>
+</section><section><h2 class="section-heading" id="labels">Labels<a class="anchor" aria-label="anchor" href="#labels"></a>
+</h2>
+<hr class="half-width">
+<p>Labels are reference information. They should be findable, legible
+and not in the way.</p>
+<ul>
+<li>
+<strong>Label sparingly.</strong> Label what the reader needs to
+orient themselves or to understand the story: the largest parks, the two
+city names. Labeling all 68 parks makes none of them readable.</li>
+<li>
+<strong>Use a halo</strong> (a thin outline in the background color,
+called a <em>buffer</em> in QGIS). It keeps text readable over any color
+and is the single most effective labeling technique.</li>
+<li>
+<strong>Use type to signal kind.</strong> Common conventions:
+italics for water and areas (rivers, parks, neighborhoods), upright for
+places and points, larger or capitalized type for more important
+names.</li>
+<li>
+<strong>Place labels inside or next to their feature</strong>, never
+across a boundary. For polygons, a point guaranteed to be inside (a
+“representative point” or “point on surface”) is safer than the
+centroid, which can fall outside an L-shaped polygon.</li>
+<li>
+<strong>Choose rules, not exceptions.</strong> “Label parks over 30
+hectares” is reproducible; hand-picking labels is not.</li>
+</ul></section><section><h2 class="section-heading" id="basemaps">Basemaps<a class="anchor" aria-label="anchor" href="#basemaps"></a>
+</h2>
+<hr class="half-width">
+<p>A tiled basemap (OpenStreetMap, Esri, CARTO, Stamen) adds streets and
+place names for free, at a cost: visual noise, a dependence on an online
+service, and <strong>license conditions</strong>. Choose a quiet, gray
+basemap for thematic maps, keep its <strong>attribution</strong> text,
+and do not rely on it for print if you need full control or very high
+resolution. Basemap tiles are in Web Mercator (EPSG:3857); software
+reprojects them to your map’s CRS, which can blur their labels
+slightly.</p>
+</section><section><h2 class="section-heading" id="locator-insets-scale-bars-and-north-arrows">Locator insets, scale bars and north arrows<a class="anchor" aria-label="anchor" href="#locator-insets-scale-bars-and-north-arrows"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>A <strong>locator inset</strong> (a small map of the state or
+country with the study area highlighted) answers “where is this?” for
+readers who do not know the area. It does not need a scale bar or legend
+of its own.</li>
+<li>A <strong>scale bar</strong> is only true on a map in a
+<strong>projected</strong> CRS with little distortion over the map (a
+UTM zone or a state plane for a county). In degrees or Web Mercator at
+large extents the scale changes across the map, and a single bar
+misleads.</li>
+<li>A <strong>north arrow</strong> is only essential when north is not
+up, but it is cheap and many readers expect one.</li>
+</ul></section><section><h2 class="section-heading" id="small-multiples-and-shared-scales">Small multiples and shared scales<a class="anchor" aria-label="anchor" href="#small-multiples-and-shared-scales"></a>
+</h2>
+<hr class="half-width">
+<p>To compare several variables or years, repeat the same map in a grid
+of <strong>small multiples</strong>. The eye compares patterns across
+panels far better than it decodes several variables in one crowded
+map.</p>
+<p>Decide deliberately whether panels <strong>share a
+classification</strong>:</p>
+<ul>
+<li>
+<strong>Same variable or same units</strong> (one rate in different
+years, two rates you want to compare): use the <strong>same class breaks
+and colors</strong> in every panel, or the same dark color will mean
+different values.</li>
+<li>
+<strong>Different variables</strong> (income in dollars, children in
+percent): each panel needs its own classes and legend, and the reader
+compares patterns, not colors.</li>
+</ul></section><section><h2 class="section-heading" id="export">Export<a class="anchor" aria-label="anchor" href="#export"></a>
+</h2>
+<hr class="half-width">
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr>
+<th>Destination</th>
+<th>Format</th>
+<th>Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Print, a paper, a poster</td>
+<td>
+<strong>PDF</strong> (vector)</td>
+<td>Sharp at any size; set the page or figure size to the printed
+size</td>
+</tr>
+<tr>
+<td>Slides, a website</td>
+<td>
+<strong>PNG</strong> at 200 to 300 dpi</td>
+<td>PNG keeps sharp edges; JPEG blurs lines and text</td>
+</tr>
+<tr>
+<td>Further editing (Illustrator, Inkscape)</td>
+<td><strong>SVG</strong></td>
+<td>Every element stays editable</td>
+</tr>
+</tbody>
+</table>
+<p>Check the exported file, not just the screen: font sizes, line widths
+and legend spacing often look different at print size.</p>
+<hr></section><section><h2 class="section-heading" id="hands-on-a-finished-map-of-car-free-households">Hands-on: a finished map of car-free households<a class="anchor" aria-label="anchor" href="#hands-on-a-finished-map-of-car-free-households"></a>
+</h2>
+<hr class="half-width">
+<p>These steps were checked in QGIS 4.0. They build on the Foundations
+episodes <a href="https://spatialturn.github.io/Foundations/qgisintro.html" class="external-link">Getting
+Started with QGIS</a> (layers, symbology, print layouts) and <a href="https://spatialturn.github.io/Foundations/qgis-tables.html" class="external-link">Tables,
+Joins and Selections</a> (virtual fields).</p>
+<div id="if-qgis-asks-you-to-choose-a-transformation" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="if-qgis-asks-you-to-choose-a-transformation" class="callout-inner">
+<h3 class="callout-title">If QGIS asks you to choose a
+transformation</h3>
+<div class="callout-content">
+<p>When layers in latitude and longitude (EPSG:4326) are drawn in a
+project in UTM (EPSG:26916), QGIS may open a window titled with
+“Multiple operations are possible for converting coordinates”. For this
+county any of the options is accurate to a few meters: keep the first
+(highlighted) one and click <strong>OK</strong>. QGIS remembers the
+choice for the project.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="part-1-load-and-order-the-layers">Part 1: Load and order the layers<a class="anchor" aria-label="anchor" href="#part-1-load-and-order-the-layers"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>Start a new project and set its CRS to
+<strong>EPSG:26916</strong> (bottom-right corner of the
+window).</p></li>
+<li>
+<p>Load these with <strong>Add Vector Layer</strong>,
+<strong>Protocol: HTTP(S)</strong>, <strong>Type:
+HTTP/HTTPS/FTP</strong>:</p>
+<table class="table">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr>
+<th>Rename to</th>
+<th>Web address</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Tracts</td>
+<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_tracts_acs.geojson</code></td>
+</tr>
+<tr>
+<td>Parks</td>
+<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_parks.geojson</code></td>
+</tr>
+<tr>
+<td>City limits</td>
+<td><code>https://raw.githubusercontent.com/SpatialTurn/CaseStudies/main/data/study_area.geojson</code></td>
+</tr>
+<tr>
+<td>Indiana counties</td>
+<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/indiana_counties.geojson</code></td>
+</tr>
+<tr>
+<td>Tippecanoe County</td>
+<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_county.geojson</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Drag them into this order, top to bottom: City limits, Parks,
+Tracts, Tippecanoe County, Indiana counties. Untick the last two; they
+are for the locator inset.</p></li>
+<li><p>Style <strong>City limits</strong> with no fill (<strong>Simple
+Fill</strong>, <strong>Fill style: No Brush</strong>) and a dark dashed
+outline, and <strong>Parks</strong> with a green fill, no outline and
+about 80% opacity (the opacity slider under the symbol).</p></li>
+</ol>
+<p><strong>Check:</strong> the dashed city outline and green parks sit
+on top of the tracts.</p>
+</div>
+<div class="section level3">
+<h3 id="part-2-rule-based-styling-with-a-no-data-class">Part 2: Rule-based styling with a “no data” class<a class="anchor" aria-label="anchor" href="#part-2-rule-based-styling-with-a-no-data-class"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Add a virtual field to <strong>Tracts</strong> with the Field
+Calculator: <code>pct_no_vehicle</code>, <strong>Decimal
+(double)</strong>,
+<code>"hh_no_vehicle" / "households" * 100</code>.</li>
+<li>
+<strong>Properties &gt; Symbology:</strong>
+<strong>Graduated</strong> on <code>pct_no_vehicle</code>,
+<strong>Natural Breaks (Jenks)</strong>, 5 classes, ramp
+<strong>YlOrRd</strong>, white outlines. Click
+<strong>Classify</strong>, then <strong>Apply</strong>.</li>
+<li>Change <strong>Graduated</strong> to <strong>Rule-based</strong> at
+the top. QGIS converts each class into a rule with a filter such as
+<code>"pct_no_vehicle" &gt; 2.38 AND "pct_no_vehicle" &lt;= 8.59</code>.</li>
+<li>Click the green <strong>+</strong>, give the new rule the filter
+<code>"pct_no_vehicle" IS NULL</code>, the label “No households (dorms)”
+and a light gray symbol with a hatch (<strong>Fill style:
+BDiagonal</strong>).</li>
+<li>Double-click each class label and round it (“0 to 2%”, “2 to 9%” and
+so on). Click <strong>OK</strong>.</li>
+</ol>
+<figure><img src="ct_qgis_rule_based.png" alt="Screenshot of the QGIS Layer Properties for the Tracts layer on the Symbology tab with the Rule-based renderer. Six rules are listed with their colors: five yellow to dark red classes whose filters compare pct_no_vehicle with the class limits, such as pct_no_vehicle less than or equal to 2.37, and a sixth hatched gray rule labeled No households with the filter pct_no_vehicle IS NULL." class="figure mx-auto d-block"><div class="figcaption">Rule-based symbology converted from Graduated,
+with a rule for no data.</div>
+</figure><p><strong>Check:</strong> the residence hall tract near campus is drawn
+in hatched gray instead of disappearing.</p>
+</div>
+<div class="section level3">
+<h3 id="part-3-labels-by-rule-with-halos">Part 3: Labels by rule, with halos<a class="anchor" aria-label="anchor" href="#part-3-labels-by-rule-with-halos"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Parks &gt; Properties &gt; Labels:</strong> choose
+<strong>Rule-based Labeling</strong> and click the green
+<strong>+</strong>.</li>
+<li>
+<strong>Filter:</strong> <code>$area &gt; 300000</code> (parks over
+30 hectares; <code>$area</code> is in square meters).
+<strong>Value:</strong> <code>name</code>.</li>
+<li>In the rule’s <strong>Text</strong> tab set the size to about 8
+points and a dark green color; in the <strong>Buffer</strong> tab tick
+<strong>Draw text buffer</strong>, size 1 mm, white. That buffer is the
+halo.</li>
+<li>Click <strong>OK</strong> twice.</li>
+</ol>
+<figure><img src="ct_qgis_labels.png" alt="Screenshot of the QGIS Layer Properties for the Parks layer on the Labels tab with Rule-based Labeling. One rule is listed: it is ticked, its filter reads area greater than 300000, and its text is the name field." class="figure mx-auto d-block"><div class="figcaption">Rule-based labeling for parks over 30
+hectares.</div>
+</figure><p><strong>Check:</strong> six parks are labeled, each with a white
+halo. If no labels appear and the numbers in the
+<strong>Preview</strong> of <code>$area</code> look far too large, open
+<strong>Project &gt; Properties &gt; General</strong> and set
+<strong>Ellipsoid</strong> to <strong>WGS 84</strong>, which is how QGIS
+measures <code>$area</code>.</p>
+<p>Add the two city names as labels in the layout later, or as a small
+point layer: places are often labeled by hand, in italics.</p>
+</div>
+<div class="section level3">
+<h3 id="part-4-a-layout-with-a-locator-inset">Part 4: A layout with a locator inset<a class="anchor" aria-label="anchor" href="#part-4-a-layout-with-a-locator-inset"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Project &gt; New Print Layout</strong>, page size
+<strong>Letter</strong> (Layout tab, right panel, after right-clicking
+the page and choosing <strong>Page Properties</strong>).</li>
+<li>
+<strong>Main map:</strong> <strong>Add Item &gt; Add Map</strong>,
+drawn over most of the page. Zoom it to the cities with the <strong>Move
+Item Content</strong> tool and the mouse wheel. In <strong>Item
+Properties &gt; Layers</strong>, tick <strong>Lock layers</strong> so
+the map keeps today’s layers.</li>
+<li>
+<strong>Locator:</strong> in the main QGIS window, tick only
+<strong>Indiana counties</strong> and <strong>Tippecanoe County</strong>
+(styled gray and red) and zoom to Indiana. Back in the layout, add a
+second, small map in a corner; tick <strong>Lock layers</strong> for it
+too. Then turn the city layers back on in the main window.</li>
+<li>In the locator’s <strong>Item Properties &gt; Overviews</strong>,
+click <strong>+</strong> and set <strong>Map frame</strong> to the main
+map (Map 1). A rectangle shows where the main map is.</li>
+<li>Add the title (stating the finding), a legend (untick <strong>Auto
+update</strong>, remove the county layers, and in the legend panel hide
+the “Tracts” group heading if you like), a scale bar in kilometers, a
+north arrow and a source line, as in the Foundations episode.</li>
+</ol>
+<figure><img src="ct_qgis_layout.png" alt="Screenshot of the QGIS Print Layout window. A Letter page holds the title Car-free households cluster near downtown Lafayette and campus, the main map of Lafayette tracts in yellow to dark red with green parks and a dashed city boundary, a small locator map of Indiana in the upper right with Tippecanoe County in red, a north arrow at the upper left, a legend at the lower left, a scale bar of 0 to 2 km at the lower right and a source line below the map. The Items panel lists the source label, picture, scale bar, legend, title, Map 2 and Map 1; Item Properties for Map 1 show Lock layers ticked." class="figure mx-auto d-block"><div class="figcaption">The print layout with the main map, the locator
+inset and the map items.</div>
+</figure>
+</div>
+<div class="section level3">
+<h3 id="part-5-export">Part 5: Export<a class="anchor" aria-label="anchor" href="#part-5-export"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Layout &gt; Export as PDF</strong> for print (vector, sharp
+at any size).</li>
+<li>
+<strong>Layout &gt; Export as Image</strong> for screens: PNG, with
+<strong>Export resolution</strong> 200 to 300 dpi.</li>
+<li>Open both files and check sizes, fonts and the legend.</li>
+</ol>
+<figure><img src="ct_qgis_final.png" alt="Finished map titled Car-free households cluster near downtown Lafayette and campus. Census tracts of Lafayette and West Lafayette are shaded yellow to dark red by the share of households without a vehicle, darkest near downtown Lafayette and the Purdue campus, with one hatched gray tract with no households. Green parks are drawn on top, six of them labeled with white halos, and a dashed line marks the city limits. A locator map of Indiana in the upper right shows Tippecanoe County in red. A legend at the lower left lists 0 to 2, 2 to 9, 9 to 15, 15 to 26 and 26 to 41 percent, no households, parks and city limits. A north arrow, a 0 to 2 km scale bar and a source line complete the layout." class="figure mx-auto d-block"><div class="figcaption">The finished map.</div>
+</figure><div id="one-layout-many-maps-atlas" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="one-layout-many-maps-atlas" class="callout-inner">
+<h3 class="callout-title">One layout, many maps: atlas</h3>
+<div class="callout-content">
+<p>The layout <strong>Atlas</strong> (Atlas menu in the layout window)
+repeats a layout once per feature of a coverage layer, for example one
+page per tract or per county, and exports them all at once. It is the
+QGIS way to make dozens of consistent maps.</p>
+</div>
+</div>
+</div>
+<hr>
+<div id="challenge-1-what-is-wrong-with-this-map" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-what-is-wrong-with-this-map" class="callout-inner">
+<h3 class="callout-title">Challenge 1: What is wrong with this map?</h3>
+<div class="callout-content">
+<p>A map of poverty rates by tract uses a satellite basemap at full
+opacity, red and green classes, labels for every street, a scale bar on
+a Web Mercator map of the whole United States, and no source line. List
+the problems and a fix for each.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul>
+<li>Satellite basemap: too busy for a thematic map; use a quiet gray
+basemap or none, and keep the attribution.</li>
+<li>Red and green classes: unreadable for many readers with color vision
+deficiency, and a diverging scheme for a one-directional rate; use a
+sequential palette (see the Accessibility episode).</li>
+<li>Labels for every street: clutter; label only what orients the
+reader.</li>
+<li>Scale bar on a national Web Mercator map: the scale varies greatly
+with latitude; drop it or use an equal-area projection and a note.</li>
+<li>No source line: add the dataset and year.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-two-maps-one-scale" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-two-maps-one-scale" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Two maps, one scale</h3>
+<div class="callout-content">
+<p>Make a second layout page (or a second layout) with two maps side by
+side: car-free households and the poverty rate
+(<code>"below_poverty" / "poverty_universe" * 100</code>). Should they
+share classes? Set them up accordingly.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Both are percentages and the point is to compare them, so
+<strong>share the classes</strong>: in both layers use
+<strong>Graduated</strong> with <strong>Mode: Fixed Interval</strong> or
+manual breaks (edit the values) at 10, 20, 40 and 60%, with the same
+ramp. Use <strong>Lock layers</strong> and <strong>Lock styles for
+layers</strong> in each map item so each keeps its own layer. One legend
+is enough. With shared classes it is obvious that poverty rates reach
+much higher than car-free rates.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Style each layer by its role; the subject is strong, context is
+quiet</li>
+<li>Convert Graduated to Rule-based to add a “no data” rule; label by
+rule with a text buffer (halo)</li>
+<li>A second map item with an Overview makes a locator inset; Lock
+layers keeps each map’s content</li>
+<li>Scale bars need a projected CRS; small multiples share classes only
+for comparable values</li>
+<li>Export PDF for print and PNG at 200 to 300 dpi for screens, and
+check the exported file</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+-->
+</div>
 </section></section><section id="aio-accessibility"><p>Content from <a href="accessibility.html">Accessibility in Map Design</a></p>
 <hr>
 <p>Last updated on 2026-10-17 |
@@ -2399,7 +3343,7 @@ to red (high) fail for many readers?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Red-green deficiencies are the most common type of CVD. For these
 readers, the green and red ends of the palette can look like similar
@@ -2745,7 +3689,7 @@ one and preview again.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>With RdYlGn under the deuteranope preview, the low and high classes
 look like similar olive tones. After switching to
@@ -2776,7 +3720,7 @@ circles for population).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>One possible answer: “Map of Indiana counties shaded in five orange
 classes by 2016 unemployment rate, with grey circles sized by county

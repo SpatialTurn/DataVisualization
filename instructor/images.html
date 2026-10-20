@@ -281,7 +281,31 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="accessibility.html">4. Accessibility in Map Design</a>
+        <a href="cartography-python.html">4. Cartography in Python</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="cartography-qgis.html">5. Cartography in QGIS</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="accessibility.html">6. Accessibility in Map Design</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -441,6 +465,27 @@ classified six ways</div>
 <p aria-hidden="true">Image 1 of 1: ‘Three histograms of Indiana county population density, each with red vertical lines marking class breaks. Most counties have fewer than 200 people per square mile, with a long tail to one county above 2,000. Equal interval breaks are spaced evenly from about 480 to 1,860, leaving almost all counties below the first break. Quantile breaks are clustered between about 54 and 224, within the main body of the data. Natural breaks fall at about 139, 300, 582 and 989.’</p>
 <figure><img src="../dv_classification_breaks.png" alt="Three histograms of Indiana county population density, each with red vertical lines marking class breaks. Most counties have fewer than 200 people per square mile, with a long tail to one county above 2,000. Equal interval breaks are spaced evenly from about 480 to 1,860, leaving almost all counties below the first break. Quantile breaks are clustered between about 54 and 224, within the main body of the data. Natural breaks fall at about 139, 300, 582 and 989." class="figure mx-auto d-block"><div class="figcaption">Histogram of Indiana county population density
 with class breaks for three methods</div>
+</figure><hr></section><section id="cartography-python"><h2 class="section-heading"><a href="cartography-python.html">Cartography in Python</a></h2>
+<hr class="half-width"></section><section id="cartography-qgis"><h2 class="section-heading"><a href="cartography-qgis.html">Cartography in QGIS</a></h2>
+<hr class="half-width">
+<h3 id="cartography-qgis-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Screenshot of the QGIS Layer Properties for the Tracts layer on the Symbology tab with the Rule-based renderer. Six rules are listed with their colors: five yellow to dark red classes whose filters compare pct_no_vehicle with the class limits, such as pct_no_vehicle less than or equal to 2.37, and a sixth hatched gray rule labeled No households with the filter pct_no_vehicle IS NULL.’</p>
+<figure><img src="../ct_qgis_rule_based.png" alt="Screenshot of the QGIS Layer Properties for the Tracts layer on the Symbology tab with the Rule-based renderer. Six rules are listed with their colors: five yellow to dark red classes whose filters compare pct_no_vehicle with the class limits, such as pct_no_vehicle less than or equal to 2.37, and a sixth hatched gray rule labeled No households with the filter pct_no_vehicle IS NULL." class="figure mx-auto d-block"><div class="figcaption">Rule-based symbology converted from Graduated,
+with a rule for no data.</div>
+</figure><hr>
+<h3 id="cartography-qgis-figure-2">Figure 2</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Screenshot of the QGIS Layer Properties for the Parks layer on the Labels tab with Rule-based Labeling. One rule is listed: it is ticked, its filter reads area greater than 300000, and its text is the name field.’</p>
+<figure><img src="../ct_qgis_labels.png" alt="Screenshot of the QGIS Layer Properties for the Parks layer on the Labels tab with Rule-based Labeling. One rule is listed: it is ticked, its filter reads area greater than 300000, and its text is the name field." class="figure mx-auto d-block"><div class="figcaption">Rule-based labeling for parks over 30
+hectares.</div>
+</figure><hr>
+<h3 id="cartography-qgis-figure-3">Figure 3</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Screenshot of the QGIS Print Layout window. A Letter page holds the title Car-free households cluster near downtown Lafayette and campus, the main map of Lafayette tracts in yellow to dark red with green parks and a dashed city boundary, a small locator map of Indiana in the upper right with Tippecanoe County in red, a north arrow at the upper left, a legend at the lower left, a scale bar of 0 to 2 km at the lower right and a source line below the map. The Items panel lists the source label, picture, scale bar, legend, title, Map 2 and Map 1; Item Properties for Map 1 show Lock layers ticked.’</p>
+<figure><img src="../ct_qgis_layout.png" alt="Screenshot of the QGIS Print Layout window. A Letter page holds the title Car-free households cluster near downtown Lafayette and campus, the main map of Lafayette tracts in yellow to dark red with green parks and a dashed city boundary, a small locator map of Indiana in the upper right with Tippecanoe County in red, a north arrow at the upper left, a legend at the lower left, a scale bar of 0 to 2 km at the lower right and a source line below the map. The Items panel lists the source label, picture, scale bar, legend, title, Map 2 and Map 1; Item Properties for Map 1 show Lock layers ticked." class="figure mx-auto d-block"><div class="figcaption">The print layout with the main map, the locator
+inset and the map items.</div>
+</figure><hr>
+<h3 id="cartography-qgis-figure-4">Figure 4</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Finished map titled Car-free households cluster near downtown Lafayette and campus. Census tracts of Lafayette and West Lafayette are shaded yellow to dark red by the share of households without a vehicle, darkest near downtown Lafayette and the Purdue campus, with one hatched gray tract with no households. Green parks are drawn on top, six of them labeled with white halos, and a dashed line marks the city limits. A locator map of Indiana in the upper right shows Tippecanoe County in red. A legend at the lower left lists 0 to 2, 2 to 9, 9 to 15, 15 to 26 and 26 to 41 percent, no households, parks and city limits. A north arrow, a 0 to 2 km scale bar and a source line complete the layout.’</p>
+<figure><img src="../ct_qgis_final.png" alt="Finished map titled Car-free households cluster near downtown Lafayette and campus. Census tracts of Lafayette and West Lafayette are shaded yellow to dark red by the share of households without a vehicle, darkest near downtown Lafayette and the Purdue campus, with one hatched gray tract with no households. Green parks are drawn on top, six of them labeled with white halos, and a dashed line marks the city limits. A locator map of Indiana in the upper right shows Tippecanoe County in red. A legend at the lower left lists 0 to 2, 2 to 9, 9 to 15, 15 to 26 and 26 to 41 percent, no households, parks and city limits. A north arrow, a 0 to 2 km scale bar and a source line complete the layout." class="figure mx-auto d-block"><div class="figcaption">The finished map.</div>
 </figure><hr></section><section id="accessibility"><h2 class="section-heading"><a href="accessibility.html">Accessibility in Map Design</a></h2>
 <hr class="half-width">
 <h3 id="accessibility-figure-1">Figure 1</h3>
