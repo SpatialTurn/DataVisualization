@@ -69,6 +69,8 @@ episodes:
 - introduction.md
 - mapvisual.md
 - mapbasics.md
+- cartography-python.md
+- cartography-qgis.md
 - accessibility.md
 
 # Information for Learners

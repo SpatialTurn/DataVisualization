@@ -41,6 +41,19 @@ title: 'Instructor Notes'
   equal interval puts almost everything in one class, and show the histogram figure to explain why.
 - Use The True Size Of website live; dragging Russia or Greenland to the equator is memorable.
 
+### Cartography in Python and in QGIS
+
+- Both build the same finished map of car-free households in Lafayette (tracts, parks, city limits, a locator
+  inset). Natural breaks differ slightly between tools (QGIS first break about 2.4%, mapclassify about 4%).
+- Python: the basemap uses Esri World Gray Canvas through contextily because OSM and CARTO tiles often fail in
+  Colab; the cell skips the basemap gracefully if tiles cannot be fetched. Notebook 02b installs
+  `matplotlib-scalebar`.
+- QGIS: switching Graduated to Rule-based keeps the classes as rules; add the `IS NULL` rule for the dorm tract.
+  `$area` uses the project ellipsoid; if label rules select nothing, set the ellipsoid to WGS 84.
+- QGIS may show the datum transformation chooser (EPSG:4326 to 26916); the first option is fine.
+- Scripted layout exports that include an online basemap can freeze QGIS on slow networks; for the class, keep
+  the basemap optional.
+
 ### Accessibility in Map Design
 
 - Turn on **View > Preview Mode > Simulate Color Blindness (Deuteranope)** on the projector with a
