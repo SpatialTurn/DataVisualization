@@ -24,7 +24,7 @@ title: 'Data Visualization and Cartography for Social Scientists'
 created: '2025-05-23'
 
 # Comma-separated list of keywords for the lesson
-keywords: 'data visualization, cartography, map design, QGIS, Python, accessibility, GIS, social science'
+keywords: 'data visualization, cartography, map design, labeling, basemaps, print layouts, small multiples, QGIS, Python, accessibility, GIS, social science'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
