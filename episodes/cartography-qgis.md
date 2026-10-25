@@ -125,13 +125,21 @@ for the project.
 1. Start a new project and set its CRS to **EPSG:26916** (bottom-right corner of the window).
 2. Load these with **Add Vector Layer**, **Protocol: HTTP(S)**, **Type: HTTP/HTTPS/FTP**:
 
-   | Rename to | Web address |
+   | Rename to | File |
    |---|---|
-   | Tracts | `https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_tracts_acs.geojson` |
-   | Parks | `https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_parks.geojson` |
-   | City limits | `https://raw.githubusercontent.com/SpatialTurn/CaseStudies/main/data/study_area.geojson` |
-   | Indiana counties | `https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/indiana_counties.geojson` |
-   | Tippecanoe County | `https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_county.geojson` |
+   | Tracts | `tippecanoe_tracts_acs.geojson` |
+   | Parks | `tippecanoe_parks.geojson` |
+   | City limits | `study_area.geojson` |
+   | Indiana counties | `indiana_counties.geojson` |
+   | Tippecanoe County | `tippecanoe_county.geojson` |
+
+   Web addresses to copy:
+
+   - **Tracts**: `https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_tracts_acs.geojson`
+   - **Parks**: `https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_parks.geojson`
+   - **City limits**: `https://raw.githubusercontent.com/SpatialTurn/CaseStudies/main/data/study_area.geojson`
+   - **Indiana counties**: `https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/indiana_counties.geojson`
+   - **Tippecanoe County**: `https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_county.geojson`
 
 3. Drag them into this order, top to bottom: City limits, Parks, Tracts, Tippecanoe County, Indiana counties.
    Untick the last two; they are for the locator inset.
