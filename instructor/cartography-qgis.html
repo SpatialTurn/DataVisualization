@@ -349,7 +349,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Cartography in QGIS</h1>
-        <p>Last updated on 2026-10-20 |
+        <p>Last updated on 2026-10-25 |
 
         <a href="https://github.com/SpatialTurn/DataVisualization/edit/main/episodes/cartography-qgis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -537,19 +537,40 @@ window).</p></li>
 <p>Load these with <strong>Add Vector Layer</strong>,
 <strong>Protocol: HTTP(S)</strong>, <strong>Type:
 HTTP/HTTPS/FTP</strong>:</p>
-<table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Rename to</th>
-<th>Web address</th>
+<table class="table"><thead><tr><th>Rename to</th>
+<th>File</th>
 </tr></thead><tbody><tr><td>Tracts</td>
-<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_tracts_acs.geojson</code></td>
+<td><code>tippecanoe_tracts_acs.geojson</code></td>
 </tr><tr><td>Parks</td>
-<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_parks.geojson</code></td>
+<td><code>tippecanoe_parks.geojson</code></td>
 </tr><tr><td>City limits</td>
-<td><code>https://raw.githubusercontent.com/SpatialTurn/CaseStudies/main/data/study_area.geojson</code></td>
+<td><code>study_area.geojson</code></td>
 </tr><tr><td>Indiana counties</td>
-<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/indiana_counties.geojson</code></td>
+<td><code>indiana_counties.geojson</code></td>
 </tr><tr><td>Tippecanoe County</td>
-<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_county.geojson</code></td>
-</tr></tbody></table></li>
+<td><code>tippecanoe_county.geojson</code></td>
+</tr></tbody></table><p>Web addresses to copy:</p>
+<ul><li>
+<strong>Tracts</strong>:
+<code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_tracts_acs.geojson</code>
+</li>
+<li>
+<strong>Parks</strong>:
+<code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_parks.geojson</code>
+</li>
+<li>
+<strong>City limits</strong>:
+<code>https://raw.githubusercontent.com/SpatialTurn/CaseStudies/main/data/study_area.geojson</code>
+</li>
+<li>
+<strong>Indiana counties</strong>:
+<code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/indiana_counties.geojson</code>
+</li>
+<li>
+<strong>Tippecanoe County</strong>:
+<code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_county.geojson</code>
+</li>
+</ul></li>
 <li><p>Drag them into this order, top to bottom: City limits, Parks,
 Tracts, Tippecanoe County, Indiana counties. Untick the last two; they
 are for the locator inset.</p></li>
@@ -685,7 +706,7 @@ the problems and a fix for each.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul><li>Satellite basemap: too busy for a thematic map; use a quiet gray
 basemap or none, and keep the attribution.</li>
@@ -721,7 +742,7 @@ share classes? Set them up accordingly.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Both are percentages and the point is to compare them, so
 <strong>share the classes</strong>: in both layers use
@@ -820,7 +841,7 @@ Add reference-style links below as needed.
   "url": "https://SpatialTurn.github.io/DataVisualization/instructor/cartography-qgis.html",
   "identifier": "https://SpatialTurn.github.io/DataVisualization/instructor/cartography-qgis.html",
   "dateCreated": "2025-05-23",
-  "dateModified": "2026-10-20",
+  "dateModified": "2026-10-25",
   "datePublished": "2026-10-25"
 }
 

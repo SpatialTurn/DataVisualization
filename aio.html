@@ -754,7 +754,7 @@ choosing a model.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Exploratory: it is for you, to check the data.</li>
@@ -786,7 +786,7 @@ better chart.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>3D distorts slice sizes: front slices look bigger than back
@@ -1081,7 +1081,7 @@ variable would you prioritize, and what else might you need?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><strong>Precipitation</strong> is the most direct indicator, because
 drought is a shortage of water. Even better is precipitation compared
@@ -1308,7 +1308,7 @@ items fail?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>
@@ -1568,7 +1568,7 @@ second and third? Is that the order the mapmaker would want?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Most readers notice the dark blue counties first (the data), then the
 large title, then the legend. That is the intended order: the data and
@@ -2081,7 +2081,7 @@ why?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>
@@ -2122,7 +2122,7 @@ and what would you divide by?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>
@@ -2699,7 +2699,7 @@ Links listed here can be reused across pages as [text][name].
 Add reference-style links below as needed.
 --></section></section><section id="aio-cartography-qgis"><p>Content from <a href="cartography-qgis.html">Cartography in QGIS</a></p>
 <hr>
-<p>Last updated on 2026-10-20 |
+<p>Last updated on 2026-10-25 |
 
         <a href="https://github.com/SpatialTurn/DataVisualization/edit/main/episodes/cartography-qgis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2941,37 +2941,56 @@ window).</p></li>
 <strong>Protocol: HTTP(S)</strong>, <strong>Type:
 HTTP/HTTPS/FTP</strong>:</p>
 <table class="table">
-<colgroup>
-<col width="50%">
-<col width="50%">
-</colgroup>
 <thead><tr>
 <th>Rename to</th>
-<th>Web address</th>
+<th>File</th>
 </tr></thead>
 <tbody>
 <tr>
 <td>Tracts</td>
-<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_tracts_acs.geojson</code></td>
+<td><code>tippecanoe_tracts_acs.geojson</code></td>
 </tr>
 <tr>
 <td>Parks</td>
-<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_parks.geojson</code></td>
+<td><code>tippecanoe_parks.geojson</code></td>
 </tr>
 <tr>
 <td>City limits</td>
-<td><code>https://raw.githubusercontent.com/SpatialTurn/CaseStudies/main/data/study_area.geojson</code></td>
+<td><code>study_area.geojson</code></td>
 </tr>
 <tr>
 <td>Indiana counties</td>
-<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/indiana_counties.geojson</code></td>
+<td><code>indiana_counties.geojson</code></td>
 </tr>
 <tr>
 <td>Tippecanoe County</td>
-<td><code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_county.geojson</code></td>
+<td><code>tippecanoe_county.geojson</code></td>
 </tr>
 </tbody>
 </table>
+<p>Web addresses to copy:</p>
+<ul>
+<li>
+<strong>Tracts</strong>:
+<code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_tracts_acs.geojson</code>
+</li>
+<li>
+<strong>Parks</strong>:
+<code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_parks.geojson</code>
+</li>
+<li>
+<strong>City limits</strong>:
+<code>https://raw.githubusercontent.com/SpatialTurn/CaseStudies/main/data/study_area.geojson</code>
+</li>
+<li>
+<strong>Indiana counties</strong>:
+<code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/indiana_counties.geojson</code>
+</li>
+<li>
+<strong>Tippecanoe County</strong>:
+<code>https://raw.githubusercontent.com/SpatialTurn/Foundations/main/data/tippecanoe_county.geojson</code>
+</li>
+</ul>
 </li>
 <li><p>Drag them into this order, top to bottom: City limits, Parks,
 Tracts, Tippecanoe County, Indiana counties. Untick the last two; they
@@ -3123,7 +3142,7 @@ the problems and a fix for each.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Satellite basemap: too busy for a thematic map; use a quiet gray
@@ -3161,7 +3180,7 @@ share classes? Set them up accordingly.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Both are percentages and the point is to compare them, so
 <strong>share the classes</strong>: in both layers use
